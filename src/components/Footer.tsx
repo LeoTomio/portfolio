@@ -1,4 +1,4 @@
-const App = () => {
+const Footer = () => {
 
     return (
       <>
@@ -7,5 +7,5 @@ const App = () => {
     )
   }
   
-  export default App
+  export default Footer
   
