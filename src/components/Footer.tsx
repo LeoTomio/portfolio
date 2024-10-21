@@ -7,7 +7,7 @@ import OutlookIcon from '../assets/icons/outlook.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4">
+    <footer className="bg-dark py-4">
       <Container>
         <Row className="text-center text-md-left">
 

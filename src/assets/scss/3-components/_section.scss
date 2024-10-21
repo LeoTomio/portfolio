@@ -1,16 +1,28 @@
 section {
-    min-height: 100vh;
-    box-shadow: 1px 1px 1px $primary;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
-
+    flex-direction: column;
+    text-align: center;
 
 }
 
-/* Rolar suavemente até as seções */
-html {
-    scroll-behavior: smooth;
+.title {
+    background-image: $gradient-title !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    &::after {
+        content: '';
+        height: 4px;
+        width: 100%;
+        display: block;
+        background-image: $gradient-title !important;
+        border-radius: 0 0 4rem 4rem;
+
+    }
 }

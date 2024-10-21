@@ -3,9 +3,14 @@
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
 // Pages
-@import "2-pages/hero";
+@import "2-pages/about";
+@import "2-pages/contact";
+@import "2-pages/home";
+@import "2-pages/project";
 // Components
 @import "3-components/body";
 @import "3-components/footer";
+@import "3-components/global";
 @import "3-components/header";
+@import "3-components/navbar";
 @import "3-components/section";

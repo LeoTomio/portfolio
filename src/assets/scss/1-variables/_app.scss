@@ -1,18 +1,57 @@
-$primary: #af3ff5 !default;
-$secondary: #2200E8 !default;
+// Theme colors
+$blue: #004295 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #d9534f !default;
+$strong-red: #CC525F !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #4BBF73 !default;
+$teal: #20c997 !default;
+$cyan: #1F9BCF !default;
 
-
-
+$white: #fff !default;
+$gray-100: #f4f7f9 !default;
+$gray-200: #e2e8ee !default;
+$gray-300: #dee6ed !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #020202 !default;
+$gray-900: #212529 !default;
 $black: #000 !default;
-$gray: #b1b1b1e6;
+
+$primary: #945bf0 !default;
+$secondary: #2200E8 !default;
+$neutral: #E6E6E6;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$dark-800: #1A1A1A !default;
+$hoverBlue: #0055e87a !default;
 $white: #fff !default;
 
 
+
+$gradient-title: linear-gradient(to right,
+                rgb(149 114 252),
+                rgb(67 231 173),
+                rgb(255, 238, 0));
+
+
+
 //lighten
+$light: lighten($gray-200, 4%) !default;
 $lg15-primary: lighten($primary, 15%);
-$lg25-primary: lighten($primary, 25%); 
-$lg-gray:lighten($gray,10);
+$lg25-primary: lighten($primary, 25%);
+$lg-gray: lighten($gray-500, 10);
 
 
 //darken
-$dk10-primary: darken($primary,10%);
+$dk10-primary: darken($primary, 10%);
+$gradient-title-darken: linear-gradient(to right,
+                darken(rgb(149 114 252), 25%),
+                darken(rgb(67 231 173), 25%),
+                darken(rgb(226 216 92), 40%));

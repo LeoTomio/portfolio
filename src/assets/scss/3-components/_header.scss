@@ -7,7 +7,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #333 !important;
     box-shadow: 1px 1px 4px $primary !important;
     color: $primary;
     padding: 15px 0;
@@ -21,18 +21,3 @@ header nav {
     padding: 0 20px;
 }
 
-/* Links do menu */
-nav a {
-
-    color: $primary !important;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2rem !important;
-    font-weight: bold !important;
-    transition: color 0.2s ease !important; 
-    // text-shadow: 1px 1px 1px $lg25-primary !important
-}
-
-nav a:hover {
-    color: $dk10-primary !important;
-}

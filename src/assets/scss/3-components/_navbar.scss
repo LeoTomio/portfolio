@@ -1,0 +1,26 @@
+/* Links do menu */
+nav a {
+
+    color: $primary !important;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    transition: color 0.2s ease !important;
+    // text-shadow: 1px 1px 1px $lg25-primary !important
+
+    background-image: $gradient-title !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    font-weight: bold;
+
+
+    &:hover {
+        background-image: $gradient-title-darken !important;
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;
+        font-weight: bold;
+    }
+}

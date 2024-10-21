@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "./components/Header"
-import Hero from "./pages/Home/sections/Hero/Hero"
+import Home from "./pages/Home/sections/Home/Home"
 import About from "./pages/Home/sections/About/About"
 import Skills from "./pages/Home/sections/Skills/Skills"
 import Footer from "./components/Footer"
@@ -12,12 +12,11 @@ const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <Hero />
+      <Home />
       <About />
       <Skills />
       <Contact />
       <Projects />
-
       <Footer />
     </React.Fragment>
   )

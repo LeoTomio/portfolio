@@ -5,6 +5,7 @@ const Skills = () => {
             <section id="habilidades">
                 <h2>Habilidadesd</h2>
                 <p>Veja alguns dos projetos que eu desenvolvi.</p>
+                
             </section>
         </>
     )

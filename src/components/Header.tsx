@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark" fixed="top" expanded={expanded}>
       <Container>
-        <Navbar.Brand href="#hero" className="mr-auto">
+        <Navbar.Brand href="#inicio" className="mr-auto">
           <Icon icon={ProfileIcone} alt='foto perfil' size='1.8rem' />
 
         </Navbar.Brand>
