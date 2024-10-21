@@ -1,5 +1,11 @@
-.herodiv{
-    font-size: 1rem;
-    background-color: $primary;
-}
+#hero {
+    text-align: center;
 
+    .title {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+}

@@ -1,3 +1,18 @@
-$primary: #9f25eb !default;
+$primary: #af3ff5 !default;
 $secondary: #2200E8 !default;
-$black:#000 !default;
+
+
+
+$black: #000 !default;
+$gray: #b1b1b1e6;
+$white: #fff !default;
+
+
+//lighten
+$lg15-primary: lighten($primary, 15%);
+$lg25-primary: lighten($primary, 25%); 
+$lg-gray:lighten($gray,10);
+
+
+//darken
+$dk10-primary: darken($primary,10%);

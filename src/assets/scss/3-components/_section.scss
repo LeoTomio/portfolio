@@ -1,0 +1,16 @@
+section {
+    min-height: 100vh;
+    box-shadow: 1px 1px 1px $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+/* Rolar suavemente até as seções */
+html {
+    scroll-behavior: smooth;
+}

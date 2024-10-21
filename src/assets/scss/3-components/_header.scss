@@ -8,7 +8,8 @@ header {
     top: 0;
     width: 100%;
     background-color: #333;
-    color: white;
+    box-shadow: 1px 1px 4px $primary !important;
+    color: $primary;
     padding: 15px 0;
     z-index: 1000;
 }
@@ -20,92 +21,18 @@ header nav {
     padding: 0 20px;
 }
 
-/* Menu do lado esquerdo */
-.left-menu {
-    display: flex;
-}
-
-/* Menu do lado direito */
-.right-menu {
-    display: flex;
-}
-
 /* Links do menu */
 nav a {
-    color: white;
+
+    color: $primary !important;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    transition: color 0.2s ease !important; 
+    // text-shadow: 1px 1px 1px $lg25-primary !important
 }
 
 nav a:hover {
-    color: #4CAF50;
-}
-
-/* Menu hambúrguer oculto por padrão */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Seções do portfólio */
-section {
-    padding: 100px 20px;
-    min-height: 100vh;
-}
-
-/* Estilos das seções */
-#home {
-    background-color: #f1f1f1;
-}
-
-#sobre {
-    background-color: #ddd;
-}
-
-#projetos {
-    background-color: #bbb;
-}
-
-#contato {
-    background-color: #999;
-}
-
-/* Rolar suavemente até as seções */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .right-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .right-menu a {
-        margin: 10px 0;
-        padding: 10px 0;
-        border-top: 1px solid #444;
-        border-bottom: 1px solid #444;
-    }
-
-    .hamburger {
-        display: block;
-        color: white;
-    }
-}
-
-/* Classe para exibir o menu no modo mobile */
-.right-menu.active {
-    display: flex;
+    color: $dk10-primary !important;
 }

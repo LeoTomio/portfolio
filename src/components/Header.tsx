@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import Icon from './Icon';
-import ProfileIcone from '../assets/icons/profile.jpg'
+import ProfileIcone from '../assets/icons/home.svg'
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -13,8 +13,8 @@ const Header = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark" fixed="top" expanded={expanded}>
       <Container>
-        <Navbar.Brand href="#home" className="mr-auto">
-          <Icon icon={ProfileIcone} alt='foto perfil' size='4rem' className='rounded-circle' />
+        <Navbar.Brand href="#hero" className="mr-auto">
+          <Icon icon={ProfileIcone} alt='foto perfil' size='1.8rem' />
 
         </Navbar.Brand>
 
@@ -23,7 +23,6 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>
             {/* <Nav.Link href="#home">Início</Nav.Link> */}
-
             <Nav.Link href="#sobre">Sobre Mim</Nav.Link>
             <Nav.Link href="#habilidades">Habilidades</Nav.Link>
             <Nav.Link href="#contato">Contato</Nav.Link>
