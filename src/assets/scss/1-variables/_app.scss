@@ -21,7 +21,7 @@ $gray-700: #495057 !default;
 $gray-800: #020202 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
-$dark-purple:#221133;
+$dark-purple: #221133;
 
 $primary: #945bf0 !default;
 $secondary: #2200E8 !default;
@@ -37,9 +37,9 @@ $white: #fff !default;
 
 
 $gradient-title: linear-gradient(to right,
-        rgb(149 114 252),
-        rgb(67 231 173),
-        rgb(255, 238, 0));
+                rgb(149 114 252),
+                rgb(67 231 173),
+                rgb(255, 238, 0));
 
 
 
@@ -53,9 +53,13 @@ $lg-gray: lighten($gray-500, 10);
 //darken
 $dk10-primary: darken($primary, 10%);
 $gradient-title-darken: linear-gradient(to right,
-        darken(rgb(149 114 252), 25%),
-        darken(rgb(67 231 173), 25%),
-        darken(rgb(226 216 92), 40%));
+                darken(rgb(149 114 252), 25%),
+                darken(rgb(67 231 173), 25%),
+                darken(rgb(226 216 92), 40%));
 
 
 
+
+
+
+$accet: $black
