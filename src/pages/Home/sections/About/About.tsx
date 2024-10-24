@@ -14,7 +14,7 @@ const About = () => {
             Me chamo Leonardo Tomio, tenho {age} e sempre fui um grande apreciador de tecnologias.
           </p>
           <p>
-            Iniciei na programação em março de 2021, desde então venho aprimorando minhas habilidades e conhecimentos. Estou sempre em busca de novos desafios e aprendizados no mundo da tecnologia.
+            Iniciei na carreira de desenvolvedor em março de 2021, desde então venho aprimorando minhas habilidades e conhecimentos. Estou sempre em busca de novos desafios e aprendizados no mundo da tecnologia.
           </p>
         </Col>
         <Col lg={6} sm={11}>

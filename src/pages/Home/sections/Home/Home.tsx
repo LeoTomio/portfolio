@@ -11,10 +11,10 @@ const Home = () => {
         <Col lg={12} className="d-flex justify-content-center mt-5">
           <Icon icon={ProfileIcon} size="20rem" className="rounded-circle" />
         </Col>
-        <Col lg={12} className="mt-2">
-          <span className=" title">Leonardo Tomio</span>
+        <Col lg={12} className="mt-2 d-flex justify-content-center">
+          <span className="title">Leonardo Tomio</span>
         </Col>
-        <Col lg={12} className="mt-2">
+        <Col lg={12} >
           <span className="subtitle">Desenvolvedor Full Stack</span>
         </Col>
       </Row>
