@@ -15,7 +15,7 @@ const Skills = () => {
             <h2 className="title">Habilidades</h2>
             <Container>
                 <Row className="m-0 mt-5">
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Axios)}
                             title="Axio"
@@ -24,16 +24,16 @@ const Skills = () => {
                             link="https://axios-http.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Bootstrap)}
                             title="Bootstrap"
-                            description="Ferramenta gratuita para desenvolvimento HTML, CSS e JS."
+                            description="Framework para desenvolvimento de componentes front-end usando HTML, CSS e JS."
                             knowledgeLevel={knowledgeEnum.avançado}
                             link="https://getbootstrap.com.br/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.CSS)}
                             title="CSS"
@@ -42,7 +42,7 @@ const Skills = () => {
                             link="https://www.w3schools.com/cssref/index.php"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Docker)}
                             title="Docker"
@@ -51,7 +51,7 @@ const Skills = () => {
                             link="https://www.docker.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Express)}
                             title="Express"
@@ -60,7 +60,7 @@ const Skills = () => {
                             link="https://expressjs.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.GitHub)}
                             title="Github"
@@ -69,7 +69,7 @@ const Skills = () => {
                             link="https://expressjs.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.GitLab)}
                             title="Github"
@@ -78,7 +78,7 @@ const Skills = () => {
                             link="https://about.gitlab.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.HTML5)}
                             title="HTML5"
@@ -87,16 +87,16 @@ const Skills = () => {
                             link="https://www.w3schools.com/html/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Insomnia)}
                             title="Insomnia"
-                            description="Plataforma colaborativa de desenvolvimento de APIs de código aberto que facilita a criação de APIs de alta qualidade."
+                            description="Plataforma colaborativa que facilita a criação de APIs de alta qualidade."
                             knowledgeLevel={knowledgeEnum.avançado}
                             link="https://insomnia.rest/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.JavaScript)}
                             title="Javascript"
@@ -105,34 +105,34 @@ const Skills = () => {
                             link="https://www.w3schools.com/js/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Knex)}
                             title="Knex.js"
-                            description="SQL query builder para Node.js que permite construir consultas de banco de dados de forma flexível e intuitiva."
+                            description="Biblioteca para Node.js que facilita a criação de consultas e migrações."
                             knowledgeLevel={knowledgeEnum.avançado}
                             link="https://knexjs.org/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.NestJS)}
                             title="Nest.js"
-                            description="Estrutura Node.js progressiva para criar aplicativos do lado do servidor eficientes, confiáveis ​​e escaláveis."
+                            description="Framework Node.js para a construção de aplicações escaláveis e eficientes."
                             knowledgeLevel={knowledgeEnum.intermediario}
                             link="https://nestjs.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.NextJS)}
                             title="Next.js"
-                            description="Framework que permite renderização do lado do servidor e geração de sites estáticos para aplicativos web em React."
+                            description="Framework de renderização híbrida,roteamento automático e otimização de performance."
                             knowledgeLevel={knowledgeEnum.iniciante}
                             link="https://nextjs.org/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.NodeJS)}
                             title="Node.js"
@@ -141,7 +141,7 @@ const Skills = () => {
                             link="https://nodejs.org/pt"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.PostgreSQL)}
                             title="PostgreSQL"
@@ -150,7 +150,7 @@ const Skills = () => {
                             link="https://www.postgresql.org/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Postman)}
                             title="Postman"
@@ -159,7 +159,7 @@ const Skills = () => {
                             link="https://www.postman.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Prisma)}
                             title="Prisma.js"
@@ -168,25 +168,34 @@ const Skills = () => {
                             link="https://www.prisma.io/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Python)}
                             title="Python"
-                            description="Linguagem de programação de alto nível, interpretada de script, orientada a objetos, funcional, com tipagem dinâmica e forte."
+                            description="Linguagem de programação, orientada a objetos, funcional, com tipagem dinâmica e forte."
                             knowledgeLevel={knowledgeEnum.iniciante}
                             link="https://www.python.org/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.React)}
-                            title="React.js"
+                            title="React"
                             description="Biblioteca front-end JavaScript com foco em criar interfaces de usuário em páginas web."
+                            knowledgeLevel={knowledgeEnum.avançado}
+                            link="https://reactnative.dev/"
+                        />
+                    </Col>
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
+                        <CardComponent
+                            icon={getIconByTechnology(TechnologyEnum.React)}
+                            title="React Native.js"
+                            description="Framework usado para desenvolvimento mobile utilizando Javascript e React."
                             knowledgeLevel={knowledgeEnum.avançado}
                             link="https://react.dev/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Redis)}
                             title="Reddis"
@@ -195,7 +204,7 @@ const Skills = () => {
                             link="https://redis.io/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Sass)}
                             title="Sass"
@@ -204,16 +213,16 @@ const Skills = () => {
                             link="https://sass-lang.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.SocketIO)}
                             title="Socket.io"
-                            description="Biblioteca orientada a eventos para aplicações web em tempo rea."
+                            description="Biblioteca orientada a eventos para aplicações web em tempo real."
                             knowledgeLevel={knowledgeEnum.intermediario}
                             link="https://socket.io/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Swagger)}
                             title="Swagger"
@@ -222,7 +231,7 @@ const Skills = () => {
                             link="https://swagger.io/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.Tailwind)}
                             title="Tailwind CSS"
@@ -231,20 +240,20 @@ const Skills = () => {
                             link="https://tailwindcss.com/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.TypeORM)}
                             title="TypeORM"
-                            description="ORM para TypeScript e JavaScript que permite interagir com bancos de dados de forma eficiente e intuitiva."
+                            description="ORM para TypeScript/JavaScript utilizando modelos de objetos."
                             knowledgeLevel={knowledgeEnum.intermediario}
                             link="https://typeorm.io/"
                         />
                     </Col>
-                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
+                    <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
                         <CardComponent
                             icon={getIconByTechnology(TechnologyEnum.TypeScript)}
                             title="TypesSript"
-                            description="Linguagem de programação que é um superconjunto de JavaScript, adicionando tipagem estática opcional e recursos de orientação a objetos"
+                            description="Superconjunto JavaScript que adiciona tipagem estática."
                             knowledgeLevel={knowledgeEnum.intermediario}
                             link="https://www.typescriptlang.org/"
                         />
@@ -254,5 +263,4 @@ const Skills = () => {
         </section>
     )
 }
-
 export default Skills

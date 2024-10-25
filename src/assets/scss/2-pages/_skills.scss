@@ -2,4 +2,20 @@
     .title {
         margin-top: 5rem;
     }
+
+    .firstColumn {
+        display: flow;
+    }
+
+    .skil-card{
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width:992px)and(max-width: 1200px) {
+
+        .skils-card {
+            width: 50%;
+        }
+    }
 }

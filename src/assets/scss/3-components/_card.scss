@@ -3,22 +3,44 @@
     color: white;
     box-shadow: 1px 1px 8px $purple;
     border-radius: 1rem;
-    margin: 1rem ;
+    margin: 1rem;
     max-width: 350px;
-    height: 200px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    /* Garante que o conteúdo seja distribuído */
+}
 
-    p {
-        margin-top: 1rem;
-        font-size: .9rem;
-        text-align: justify;
-    }
+.card-body {
+    padding-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    text-align: start; 
+    position: absolute;
+    bottom: 15px;
+}
+
+.card p {
+    margin-block: 1rem !important; 
+    font-size: .9rem;
+    text-align: start;
 }
 
 
-@media (max-width: 500px) {
-  
-   
+.rowCard {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
 }
+
+
+
+@media (max-width: 500px) {}

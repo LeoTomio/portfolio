@@ -1,5 +1,3 @@
-
-
 import axiosIcon from '../assets/icons/devIcons/axios.svg';
 import bootstrapIcon from '../assets/icons/devIcons/bootstrap.svg';
 import cssIcon from '../assets/icons/devIcons/css.svg';
