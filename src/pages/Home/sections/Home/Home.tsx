@@ -4,7 +4,6 @@ import ProfileIcon from '../../../../assets/icons/profile.jpg'
 import { Col, Row } from "react-bootstrap"
 
 const Home = () => {
-
   return (
     <section id="inicio" className="min-vh-100">
       <Row className="mx-2">
@@ -14,10 +13,12 @@ const Home = () => {
         <Col lg={12} className="mt-2 d-flex justify-content-center">
           <span className="title">Leonardo Tomio</span>
         </Col>
-        <Col lg={12} >
+        <Col lg={12} className="mt-3" >
           <span className="subtitle">Desenvolvedor Full Stack</span>
         </Col>
+       
       </Row>
+
     </section>
   )
 }

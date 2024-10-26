@@ -6,9 +6,9 @@ export enum dataReturn {
 }
 
 export enum knowledgeEnum{
-    iniciante = "Iniciante",
-    intermediario = "Intermediario",
-    avançado = "Avançado"
+    Iniciante = "Iniciante",
+    Intermediario = "Intermediario",
+    Avancado = "Avançado"
 }
 
 export enum TechnologyEnum {

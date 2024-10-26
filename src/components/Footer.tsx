@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import Icon from './Icon';
-import GithubIcon from '../assets/icons/github.svg';
+import GithubIcon from '../assets/icons/devIcons/github.svg';
 import LinkedinIcon from '../assets/icons/linkedin.svg';
 import OutlookIcon from '../assets/icons/outlook.svg';
 
