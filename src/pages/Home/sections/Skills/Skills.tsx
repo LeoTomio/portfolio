@@ -1,17 +1,16 @@
 import { Button, Col, Container, Row } from "react-bootstrap"
+import developerAnimatedIcon from '../../../../assets/icons/animatedIcons/skills.json'
+import AnimatedIcon from "../../../../components/AnimatedIcon"
 import CardComponent from "../../../../components/Card"
 import { knowledgeEnum, TechnologyEnum } from "../../../../utils/enum"
 import getIconByTechnology from "../../../../utils/IconExporter"
-import AnimatedIcon from "../../../../components/AnimatedIcon"
-import developerAnimatedIcon from '../../../../assets/icons/animatedIcons/skills.json';
 
 // Não usadas
 // MYSQL
 // Putty
 // VSCode
 // ReactBootstrap
-const Skills = () => {
-
+const Skills = () => { 
     return (
 
         <section id="habilidades" className="min-vh-100 ">
@@ -21,7 +20,7 @@ const Skills = () => {
                     animatedIcon={developerAnimatedIcon}
                     loop
                     style={{
-                        marginRight:'1rem'
+                        marginRight: '1rem'
                     }}
                 />
                 <h2 className="title">Habilidades</h2>

@@ -2,10 +2,14 @@ export enum dataReturn {
     full = "full",
     month = "month",
     year = "year"
-
 }
 
-export enum knowledgeEnum{
+export enum LanguageEnum {
+    pt = 'pt',
+    en = 'en'
+}
+
+export enum knowledgeEnum {
     Iniciante = "Iniciante",
     Intermediario = "Intermediario",
     Avancado = "Avançado"
@@ -42,4 +46,4 @@ export enum TechnologyEnum {
     TypeORM = "typeORM",
     TypeScript = 'typescript',
     VSCode = 'vscode',
-  }
+}
