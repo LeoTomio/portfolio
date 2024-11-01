@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
 import AnimatedIcon from './AnimatedIcon';
 import homeAnimatedIcon from '../assets/icons/animatedIcons/home.json';
+import ptFlagAnimatedIcon from '../assets/icons/animatedIcons/ptFlag.json';
+import enFlagAnimatedIcon from '../assets/icons/animatedIcons/enFlag.json';
+import languageAnimatedIcon from '../assets/icons/animatedIcons/language.json';
 import useDictionary from '../utils/hook/useDictionary';
 import { LanguageEnum } from '../utils/enum';
 
@@ -31,13 +34,24 @@ const Header = () => {
                 <Nav.Link href={menu.href}>{menu.title}</Nav.Link>
               )
             })}
-            <Button onClick={() => {
-              if (language === LanguageEnum.pt) {
-                setLanguage(LanguageEnum.en)
-              } else if (language === LanguageEnum.en) {
-                setLanguage(LanguageEnum.pt)
-              }
-            }}> {translatedData.changeLanguage}</Button>
+
+            <NavDropdown className="nav-item-dropdown "
+              title={<AnimatedIcon style={{ height: 40 }} animatedIcon={languageAnimatedIcon} />}
+              id="language-nav-dropdown">
+              <NavDropdown.Item href="#action/3.2" onClick={() => { setLanguage(LanguageEnum.pt) }} >
+                <div className='d-flex align-items-center gap-2 pe-3'>
+
+                  Português
+                  <AnimatedIcon style={{ height: 40 }} animatedIcon={ptFlagAnimatedIcon} loop />
+                </div>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => { setLanguage(LanguageEnum.en) }}>
+                <div className='d-flex align-items-center gap-2 pe-3'>
+                  English
+                  <AnimatedIcon style={{ height:32 }} animatedIcon={enFlagAnimatedIcon} loop />
+                </div>
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -46,3 +60,8 @@ const Header = () => {
 };
 
 export default Header;
+
+
+// display: flex;
+// gap: 4px;
+// align-items: center;

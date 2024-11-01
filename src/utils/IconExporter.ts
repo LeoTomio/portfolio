@@ -64,7 +64,7 @@ const getIconByTechnology = (technology: TechnologyEnum) => {
         [TechnologyEnum.VSCode]: vscodeIcon,
     };
 
-    return icons[technology] || null;
+    return icons[technology];
 };
 
 export default getIconByTechnology

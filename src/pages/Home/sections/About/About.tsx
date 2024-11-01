@@ -1,12 +1,11 @@
 import { Col, Row } from "react-bootstrap";
-import developerAnimatedIcon from '../../../../assets/icons/animatedIcons/developer.json';
 import aboutAnimatedIcon from '../../../../assets/icons/animatedIcons/about.json';
+import developerAnimatedIcon from '../../../../assets/icons/animatedIcons/developer.json';
 import AnimatedIcon from "../../../../components/AnimatedIcon";
-import { DataCalculator } from "../../../../utils/Functions";
-import { dataReturn } from "../../../../utils/enum";
+import useDictionary from "../../../../utils/hook/useDictionary";
 
 const About = () => {
-  const age = DataCalculator({ year: 2000, month: 2, day: 15 }, dataReturn.year)
+  const { translatedData } = useDictionary()
   const isMobile = window.innerWidth < 991
   return (
     <section id="sobre">
@@ -16,27 +15,29 @@ const About = () => {
           animatedIcon={aboutAnimatedIcon}
           loop
           style={{
-            marginBottom:'1rem',
-            marginRight:'1rem'
+            marginBottom: '1rem',
+            marginRight: '1rem'
           }}
         />
-        <h2 className="title">Sobre mim</h2>
+        <h2 className="title">{translatedData.titles[0].title}</h2>
       </div>
       <Row className="mt-5 justify-content-center">
         <Col lg={6} sm={11} className="about-text">
-          <p >
-            Me chamo Leonardo Tomio, tenho {age} e sempre fui um grande apreciador de tecnologias.
+          <p>
+            {translatedData.about.firstP}
           </p>
           <p>
-            Iniciei na carreira de desenvolvedor em março de 2021, desde então venho aprimorando minhas habilidades e conhecimentos. Estou sempre em busca de novos desafios e aprendizados no mundo da tecnologia.
+            {translatedData.about.secondP}
           </p>
         </Col>
         <Col lg={6} sm={11}>
           <ul className="topics-list">
-            <li>Desenvolvedor web a <b>{DataCalculator({ year: 2021, month: 2, day: 15 }, dataReturn.full)}</b></li>
-            <li>Cursando Análise e Desenvolvimento de Sistemas</li>
-            <li>Interessado em Front-end e Back-end</li>
-            <li>Foco em Javascript </li>
+            {translatedData.about.itens.map((item) => {
+              return (
+                <li>{item}</li>
+              )
+            })}
+
           </ul>
         </Col>
       </Row>

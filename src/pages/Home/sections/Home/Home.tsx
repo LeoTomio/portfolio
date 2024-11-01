@@ -1,9 +1,10 @@
-import Header from "../../../../components/Header"
-import Icon from "../../../../components/Icon"
-import ProfileIcon from '../../../../assets/icons/profile.jpg'
 import { Col, Row } from "react-bootstrap"
+import ProfileIcon from '../../../../assets/icons/profile.jpg'
+import Icon from "../../../../components/Icon"
+import useDictionary from "../../../../utils/hook/useDictionary"
 
 const Home = () => {
+  const { translatedData } = useDictionary()
   return (
     <section id="inicio" className="min-vh-100">
       <Row className="mx-2">
@@ -14,11 +15,9 @@ const Home = () => {
           <span className="title">Leonardo Tomio</span>
         </Col>
         <Col lg={12} className="mt-3" >
-          <span className="subtitle">Desenvolvedor Full Stack</span>
+          <span className="subtitle">{translatedData.workingPosition}</span>
         </Col>
-       
       </Row>
-
     </section>
   )
 }

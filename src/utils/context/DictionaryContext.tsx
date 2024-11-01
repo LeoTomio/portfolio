@@ -3,19 +3,13 @@ import en from "../dictionary/en";
 import pt from "../dictionary/pt";
 import { LanguageEnum } from "../enum";
 
-
-
-
 const initialState = {
   language: 'pt',
   setLanguage: (value: string) => { },
   translatedData: pt
-
 };
 
-
 const DictionaryContext = React.createContext(initialState);
-
 interface DictionaryProviderProps {
   children: React.ReactNode;
 }
@@ -36,7 +30,6 @@ function DictionaryProvider({ children }: DictionaryProviderProps) {
   useEffect(() => {
     console.log('translatedData', translatedData)
   }, [translatedData]);
-
 
   return (
     <DictionaryContext.Provider

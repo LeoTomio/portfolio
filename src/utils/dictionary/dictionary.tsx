@@ -1,8 +1,9 @@
 export interface DictionaryType {
+    workingPosition: string
     changeLanguage: string
     titles: Array<Titles>
     about: About
-    skils: Array<Skills>
+    skills: Array<Skills>
 }
 
 interface Titles {
@@ -13,15 +14,15 @@ interface Titles {
 interface About {
     firstP: string
     secondP: string
-    itens: Array<AboutItens>
-}
-
-interface AboutItens {
-    text: string
+    itens: Array<string>
 }
 
 interface Skills {
-    title: string,
+    icon: string
+    title: string
     description: string
+    knowledgeLevel: string
+    link: string
 }
+
 

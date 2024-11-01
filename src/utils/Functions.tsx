@@ -1,15 +1,17 @@
-import { dataReturn } from "./enum"
+import { dataReturn } from "./enum";
 
 interface DataCalculatorProps {
-    year: number
-    month: number
-    day: number
+    year: number;
+    month: number;
+    day: number;
+    fullReturn: string
+    language: string
 }
 
+export function DataCalculator({ year, month, day, fullReturn, language }: DataCalculatorProps) {
+    const startDate = new Date(year, month, day);
+    const actualDate = new Date();
 
-export function DataCalculator({ year, month, day }: DataCalculatorProps, fullReturn: string) {
-    const startDate = new Date(year, month, day)
-    const actualDate = new Date()
     const startYear = startDate.getFullYear();
     const startMonth = startDate.getMonth();
 
@@ -23,12 +25,21 @@ export function DataCalculator({ year, month, day }: DataCalculatorProps, fullRe
         yearsDifference--;
         monthsDifference += 12;
     }
+
+    const yearText = language === 'pt'
+        ? `${yearsDifference} ano${yearsDifference !== 1 ? 's' : ''}`
+        : `${yearsDifference} year${yearsDifference !== 1 ? 's' : ''}`;
+
+    const monthText = language === 'pt'
+        ? `${monthsDifference} mês${monthsDifference !== 1 ? 'es' : ''}`
+        : `${monthsDifference} month${monthsDifference !== 1 ? 's' : ''}`;
+
     if (fullReturn === dataReturn.full) {
-        return `${yearsDifference} ano${yearsDifference > 1 && 's'} e ${monthsDifference} mes${monthsDifference > 1 && 'es'}`
-    } else if (fullReturn === dataReturn.month) {
-        return `${monthsDifference} mes${monthsDifference > 1 && 'es'}`
-    } else {
-        return `${yearsDifference} ano${yearsDifference > 1 && 's'}`
+        return `${yearText} e ${monthText}`;
     }
 
-}
+    if (fullReturn === dataReturn.month) {
+        return monthText;
+    }
+    return yearText;
+} 

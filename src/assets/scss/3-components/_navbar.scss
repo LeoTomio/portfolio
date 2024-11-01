@@ -24,3 +24,30 @@ nav a {
         font-weight: bold;
     }
 }
+
+.nav-item-dropdown {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    .dropdown-menu {
+        background-color: $generalBackground;
+  
+    }
+    .dropdown-menu.show{
+        position: absolute;
+        left: -2rem;
+    }
+}
+
+
+.dropdown-item {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: end !important;
+    padding:0;
+    padding-right: 1rem;
+}
