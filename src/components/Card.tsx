@@ -17,7 +17,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ icon, title, description, knowl
             <Row className="rowCard">
                 <Col xs={3} className="text-center firstColumn">
                     <a href={link} target='_blank' className='iconBg' >
-                        <Icon icon={icon} size="3rem" className="rounded-circle" />
+                        <Icon icon={icon} size="3rem" className="p-1" />
                     </a>
                 </Col>
                 <Col xs={9} >

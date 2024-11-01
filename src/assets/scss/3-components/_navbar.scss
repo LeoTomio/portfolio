@@ -31,15 +31,11 @@ nav a {
     align-items: center;
     align-self: center;
     padding-top: 2rem;
-    padding-bottom: 1rem;
-
-    .dropdown-menu {
-        background-color: $generalBackground;
-  
-    }
+    padding-bottom: 1rem; 
     .dropdown-menu.show{
         position: absolute;
         left: -2rem;
+        background-color: lighten($dark-purple,5%) !important;  
     }
 }
 

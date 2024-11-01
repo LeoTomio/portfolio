@@ -20,7 +20,7 @@ const Skills = () => {
                 />
                 <h2 className="title">{translatedData.titles[1].title}</h2>
             </div>
-            <Container>
+            <Container className="mt-5">
                 <Row className="m-0 ">
                     {/* <Col lg={12} className="d-flex justify-content-between px-5 mb-4">
                         <Button>Todos</Button>

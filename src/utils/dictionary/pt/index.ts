@@ -2,6 +2,9 @@ import { dataReturn, knowledgeEnum, LanguageEnum, TechnologyEnum } from "../../e
 import { DataCalculator } from "../../Functions"
 import getIconByTechnology from "../../IconExporter"
 import { DictionaryType } from "../dictionary"
+import gmailIcon from "../../../assets/icons/gmail.png"
+import linkedinIcon from "../../../assets/icons/linkedin.svg"
+import githubIcon from "../../../assets/icons/devIcons/github.svg"
 
 const pt: DictionaryType = {
     workingPosition: "Desenvolvedor Full Stack",
@@ -212,6 +215,14 @@ const pt: DictionaryType = {
             knowledgeLevel: knowledgeEnum.Intermediario,
             link: "https://www.typescriptlang.org/"
         }
-    ]
+    ],
+    contact: {
+        description: "Fique à vontade para entrar em contato comigo! abaixo segue meus contatos",
+        links: [
+            { icon: linkedinIcon, title: 'Linkedin: ', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
+            { icon: gmailIcon, title: 'Email: ', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
+            { icon: githubIcon, title: 'Github: ', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
+        ]
+    }
 }
 export default pt

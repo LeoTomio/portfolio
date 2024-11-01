@@ -38,7 +38,7 @@ const Header = () => {
             <NavDropdown className="nav-item-dropdown "
               title={<AnimatedIcon style={{ height: 40 }} animatedIcon={languageAnimatedIcon} />}
               id="language-nav-dropdown">
-              <NavDropdown.Item href="#action/3.2" onClick={() => { setLanguage(LanguageEnum.pt) }} >
+              <NavDropdown.Item onClick={() => { setLanguage(LanguageEnum.pt) }} >
                 <div className='d-flex align-items-center gap-2 pe-3'>
 
                   Português
@@ -48,7 +48,7 @@ const Header = () => {
               <NavDropdown.Item onClick={() => { setLanguage(LanguageEnum.en) }}>
                 <div className='d-flex align-items-center gap-2 pe-3'>
                   English
-                  <AnimatedIcon style={{ height:32 }} animatedIcon={enFlagAnimatedIcon} loop />
+                  <AnimatedIcon style={{ height: 32 }} animatedIcon={enFlagAnimatedIcon} loop />
                 </div>
               </NavDropdown.Item>
             </NavDropdown>

@@ -4,6 +4,7 @@ export interface DictionaryType {
     titles: Array<Titles>
     about: About
     skills: Array<Skills>
+    contact: Contact
 }
 
 interface Titles {
@@ -26,3 +27,16 @@ interface Skills {
 }
 
 
+interface Contact {
+    description: string
+    links: Array<Links>
+
+}
+
+interface Links {
+    icon: string
+    title: string
+    text: string
+    link: string
+
+}
