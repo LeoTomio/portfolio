@@ -1,10 +1,4 @@
-import { StrictMode } from 'react'
 import ReactDOM from "react-dom";
-import App from './App'
-import { DictionaryProvider } from './utils/context/DictionaryContext';
+import Routes from './Routes';
 
-ReactDOM.render(
-    <App />
-  ,
-  document.getElementById("root")
-);
+ReactDOM.render(<Routes />, document.getElementById("root"));

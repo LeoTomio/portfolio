@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
-import developerAnimatedIcon from '../../../../assets/icons/animatedIcons/skills.json'
+import skillsAnimatedIcon from '../../../../assets/icons/animatedIcons/skills.json'
 import AnimatedIcon from "../../../../components/AnimatedIcon"
 import CardComponent from "../../../../components/Card"
 import useDictionary from "../../../../utils/hook/useDictionary"
@@ -12,7 +12,7 @@ const Skills = () => {
             <div className="d-flex align-items-end">
                 <AnimatedIcon
                     className="animatedIcon"
-                    animatedIcon={developerAnimatedIcon}
+                    animatedIcon={skillsAnimatedIcon}
                     loop
                     style={{
                         marginRight: '1rem'
@@ -30,7 +30,7 @@ const Skills = () => {
                     </Col> */}
                     {!!translatedData && translatedData.skills.map((skill) => {
                         return (
-                            <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center skils-card">
+                            <Col lg={4} xs={12} sm={12} md={6} className="d-flex justify-content-center">
                                 <CardComponent
                                     icon={skill.icon}
                                     title={skill.title}

@@ -222,7 +222,15 @@ const pt: DictionaryType = {
             { icon: linkedinIcon, title: 'Linkedin: ', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
             { icon: gmailIcon, title: 'Email: ', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
             { icon: githubIcon, title: 'Github: ', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
-        ]
-    }
+        ],
+        
+        curriculumButton:'Curriculo',
+        curriculumText:"Deseja ver meu curriculo?"
+    },
+    // projects:[
+    //     {
+
+    //     }
+    // ]
 }
 export default pt

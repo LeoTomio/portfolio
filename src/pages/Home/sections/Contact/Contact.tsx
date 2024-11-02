@@ -3,12 +3,19 @@ import useDictionary from "../../../../utils/hook/useDictionary";
 import contactMeAnimatedIcon from '../../../../assets/icons/animatedIcons/contactMe.json';
 import { Button, Col, Row } from "react-bootstrap";
 import Icon from "../../../../components/Icon";
+import { LanguageEnum } from "../../../../utils/enum";
 
 const Contact = () => {
-    const { translatedData } = useDictionary();
+    const { translatedData, language } = useDictionary();
 
     function openResume() {
-        window.open('https://drive.google.com/file/d/15Sd92qu6IEryW4QYRXHXGtlGVocjalGp/view?usp=sharing');
+        let link
+        if (language === LanguageEnum.pt) {
+            link = ('https://drive.google.com/file/d/15Sd92qu6IEryW4QYRXHXGtlGVocjalGp/view?usp=sharing');
+        } else if (language === LanguageEnum.en) {
+            link = ('https://drive.google.com/file/d/1nomcuy0xTU8u4b0SrtozxI3GOuR_6SNT/view?usp=sharing');
+        }
+        window.open(link)
     }
 
     return (
@@ -42,8 +49,8 @@ const Contact = () => {
                     </ul>
                 </Col>
                 <Col lg={6} sm={11} className="d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
-                    <h5>Deseja ver meu currículo?</h5>
-                    <Button className="mt-3" onClick={openResume}>Currículo</Button>
+                    <h5>{translatedData.contact.curriculumText}</h5>
+                    <Button className="mt-3 linear-btn" onClick={openResume}>{translatedData.contact.curriculumButton}</Button>
                 </Col>
             </Row>
         </section>

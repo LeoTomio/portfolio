@@ -13,7 +13,7 @@ interface CustomCardProps {
 
 const CustomCard: React.FC<CustomCardProps> = ({ icon, title, description, knowledgeLevel, link }) => {
     return (
-        <Card className="p-3 d-flex">
+        <Card className="p-3 d-flex card-skills">
             <Row className="rowCard">
                 <Col xs={3} className="text-center firstColumn">
                     <a href={link} target='_blank' className='iconBg' >

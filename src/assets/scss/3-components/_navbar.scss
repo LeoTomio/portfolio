@@ -5,18 +5,16 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
     font-size: 1.2rem !important;
-    font-weight: bold !important;
-    transition: color 0.2s ease !important;
-    // text-shadow: 1px 1px 1px $lg25-primary !important
-
+    font-weight: bold !important; 
     background-image: $gradient-title !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     color: transparent !important;
     font-weight: bold;
-
+    transition: transform 0.3s ease;
 
     &:hover {
+        transform: scale(1.1); 
         background-image: $gradient-title-darken !important;
         background-clip: text !important;
         -webkit-background-clip: text !important;
@@ -35,7 +33,7 @@ nav a {
     .dropdown-menu.show{
         position: absolute;
         left: -2rem;
-        background-color: lighten($dark-purple,5%) !important;  
+        background-color: #212529 !important;  
     }
 }
 

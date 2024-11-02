@@ -21,9 +21,9 @@ const Header = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark" fixed="top" expanded={expanded}>
       <Container>
-        <Navbar.Brand href="#inicio" className="mr-auto" >
+        <Navbar.Brand href="/#inicio" className="mr-auto" >
           <AnimatedIcon
-            style={{ height: 60 }}
+            style={{ height: 35 }}
             animatedIcon={homeAnimatedIcon} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
@@ -31,7 +31,7 @@ const Header = () => {
           <Nav>
             {translatedData.titles.map((menu) => {
               return (
-                <Nav.Link href={menu.href}>{menu.title}</Nav.Link>
+                <Nav.Link href={`/${menu.href}`}>{menu.title}</Nav.Link>
               )
             })}
 

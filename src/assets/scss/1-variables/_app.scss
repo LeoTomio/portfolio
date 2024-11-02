@@ -23,7 +23,7 @@ $gray-900: #212529 !default;
 $black: #000 !default;
 $dark-purple: #221133;
 
-$primary: #945bf0 !default;
+$primary: #DAA520 !default;
 $secondary: #2200E8 !default;
 $neutral: #E6E6E6;
 $success: $green !default;
@@ -34,13 +34,15 @@ $dark-800: #1A1A1A !default;
 $hoverBlue: #0055e87a !default;
 $white: #fff !default;
 
+$g-color-1: #9D50BB;
+$g-color-2: #6E48AA;
+$g-color-3: #FFB75E;
+$g-color-4: #ED8F03;
 
-
+//linear-gradient
 $generalBackground: linear-gradient(280deg, $black, $dark-purple);
-$gradient-title: linear-gradient(to right,
-        rgb(149 114 252),
-        rgb(67 231 173),
-        rgb(255, 238, 0));
+$gradient-title: linear-gradient(90deg,
+        $g-color-1, $g-color-2, $g-color-3, $g-color-4);
 
 
 
@@ -54,13 +56,7 @@ $lg-gray: lighten($gray-500, 10);
 //darken
 $dk10-primary: darken($primary, 10%);
 $gradient-title-darken: linear-gradient(to right,
-        darken(rgb(149 114 252), 25%),
-        darken(rgb(67 231 173), 25%),
-        darken(rgb(226 216 92), 40%));
-
-
-
-
-
-
-$accet: $black
+        darken($g-color-1, 20%),
+        darken($g-color-2, 20%),
+        darken($g-color-3, 20%),
+        darken($g-color-4, 20%));
