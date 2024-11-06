@@ -5,7 +5,8 @@ export interface DictionaryType {
     about: About
     skills: Array<Skills>
     contact: Contact
-    // projects:Array<Project>
+    projects: Array<Project>
+    detailedProject: Array<DetailedProject>
 }
 interface Titles {
     title: string
@@ -45,13 +46,19 @@ export interface Project {
 
 }
 
-export interface DetailedProject extends Pick<Project, 'id' | 'title' | 'technologies'> {
-    description:{
-        
-    }
+export interface DetailedProject extends Pick<Project, 'id' | 'title' | 'technologies'> {    
+    mainDescription: string
+    description: Array<DetailedProjectDescription>
+    github: Array<GithubProject>;
 }
+
+interface DetailedProjectDescription {
+    paragraph: string
+    image: string
+}
+
 interface GithubProject {
-    buttonName: string;
-    link: string;
+    link?: string;
     isPrivate: boolean;
+    buttonName: string;
 }

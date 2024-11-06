@@ -26,11 +26,6 @@ function DictionaryProvider({ children }: DictionaryProviderProps) {
     }
   }, [language]);
 
-
-  useEffect(() => {
-    console.log('translatedData', translatedData)
-  }, [translatedData]);
-
   return (
     <DictionaryContext.Provider
       value={{

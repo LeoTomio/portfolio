@@ -1,3 +1,20 @@
+//breakpoints
+$xl: 1399px;
+$lg: 1999px;
+$md: 991px;
+$sm: 767px;
+$xs: 575px;
+
+
+//xxl: ≥1400px — Telas ultra-grandes, como monitores de desktop de alta resolução.
+//xl: ≥1200px — Telas muito grandes, como monitores widescreen.
+//lg: ≥992px — Telas grandes, como desktops e laptops.
+//md: ≥768px — Telas médias, como tablets em modo retrato.
+//sm: ≥576px — Telas pequenas, como a maioria dos smartphones.
+//xs: Menor que 576px — Usado para dispositivos muito pequenos (ex.: smartphones antigos).
+
+
+
 // Theme colors
 $blue: #004295 !default;
 $purple: #6f42c1 !default;
@@ -42,7 +59,7 @@ $g-color-4: #ED8F03;
 //linear-gradient
 $generalBackground: linear-gradient(280deg, $black, $dark-purple);
 $gradient-title: linear-gradient(90deg,
-        $g-color-1, $g-color-2, $g-color-3, $g-color-4);
+                $g-color-1, $g-color-2, $g-color-3, $g-color-4);
 
 
 
@@ -56,7 +73,7 @@ $lg-gray: lighten($gray-500, 10);
 //darken
 $dk10-primary: darken($primary, 10%);
 $gradient-title-darken: linear-gradient(to right,
-        darken($g-color-1, 20%),
-        darken($g-color-2, 20%),
-        darken($g-color-3, 20%),
-        darken($g-color-4, 20%));
+                darken($g-color-1, 20%),
+                darken($g-color-2, 20%),
+                darken($g-color-3, 20%),
+                darken($g-color-4, 20%));

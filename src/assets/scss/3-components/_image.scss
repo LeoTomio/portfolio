@@ -1,0 +1,8 @@
+.scalable-img {
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px $purple;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 2px 2px 12px $purple, 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}

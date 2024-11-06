@@ -3,7 +3,7 @@ import ProfileIcon from '../../../../assets/icons/profile.jpg'
 import Icon from "../../../../components/Icon"
 import useDictionary from "../../../../utils/hook/useDictionary"
 
-const Home = () => {
+const Hero = () => {
   const { translatedData } = useDictionary()
   return (
     <section id="inicio" className="min-vh-100">
@@ -22,4 +22,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Hero

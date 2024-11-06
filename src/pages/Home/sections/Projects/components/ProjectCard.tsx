@@ -1,15 +1,14 @@
 
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Project } from '../../../../../utils/dictionary/dictionary';
-import Icon from '../../../../../components/Icon';
-import padLockIcon from '../../../../../assets/icons/padlock.svg'
+import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { Project } from '../../../../../utils/dictionary/dictionary';
 
 const ProjectCard = ({ id, shortDescription, image, technologies, title }: Project) => {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate(`/project/${id}`); // Navega para a rota de projeto com o ID do projeto
+        
+        setTimeout(() => navigate(`/project/${id}`), 500); // Espera 500ms antes de navegar
     };
 
     return (

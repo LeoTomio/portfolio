@@ -1,0 +1,22 @@
+.ts-modal {
+    width: 95%;
+    margin: .5rem auto;
+    max-width: 800px;
+}
+
+.ts-modal-sm {
+    max-width: 600px !important;
+}
+.ts-modal-md {
+    max-width: 1000px !important;
+}
+.ts-modal-lg {
+    max-width: 1200px !important;
+}
+.ts-modal-xl {
+    max-width: 1400px !important;
+}
+.content-modal{
+    max-height: 700px;
+    overflow: auto;
+}

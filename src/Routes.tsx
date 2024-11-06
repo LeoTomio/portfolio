@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home/sections/Home/Home";
 import About from "./pages/Home/sections/About/About";
 import Skills from "./pages/Home/sections/Skills/Skills";
 import Footer from "./components/Footer";
@@ -9,6 +8,8 @@ import Contact from "./pages/Home/sections/Contact/Contact";
 import Projects from "./pages/Home/sections/Projects/Projects";
 import Project from "./pages/Projects/index"
 import { DictionaryProvider } from "./utils/context/DictionaryContext";
+import Page404 from "./pages/NotFound";
+import Home from "./pages/Home";
 
 const AppRoutes = () => {
   return (
@@ -16,20 +17,9 @@ const AppRoutes = () => {
       <Router>
         <Header />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Home />
-                <About />
-                <Skills />
-                <Contact />
-                <Projects />
-              </>
-            }
-          />
-          
+          <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<Project />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />
       </Router>

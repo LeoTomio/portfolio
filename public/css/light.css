@@ -13057,6 +13057,46 @@ textarea.form-control-lg {
   min-width: 60%;
 }
 
+.detailedProject {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  margin-top: 5rem;
+  overflow-x: hidden;
+}
+.detailedProject .mainDescription {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
 #inicio {
   text-align: center;
 }
@@ -13225,6 +13265,42 @@ header nav {
   position: relative;
   height: 80px;
   width: 80px;
+}
+
+.scalable-img {
+  border-radius: 1rem;
+  box-shadow: 1px 1px 8px #6f42c1;
+}
+.scalable-img:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 12px #6f42c1, 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ts-modal {
+  width: 95%;
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+
+.ts-modal-sm {
+  max-width: 600px !important;
+}
+
+.ts-modal-md {
+  max-width: 1000px !important;
+}
+
+.ts-modal-lg {
+  max-width: 1200px !important;
+}
+
+.ts-modal-xl {
+  max-width: 1400px !important;
+}
+
+.content-modal {
+  max-height: 700px;
+  overflow: auto;
 }
 
 /* Links do menu */

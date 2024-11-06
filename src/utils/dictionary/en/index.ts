@@ -5,6 +5,9 @@ import { DictionaryType } from "../dictionary";
 import gmailIcon from "../../../assets/icons/gmail.png"
 import linkedinIcon from "../../../assets/icons/linkedin.svg"
 import githubIcon from "../../../assets/icons/devIcons/github.svg"
+import humanizeiHome from "../../images/projects/humanizei/home.png"
+import attendantPage from "../../images/projects/humanizei/atendantPage.png"
+import call from "../../images/projects/humanizei/call.png"
 
 const en: DictionaryType = {
     workingPosition: "Full Stack Developer",
@@ -223,9 +226,36 @@ const en: DictionaryType = {
             { icon: gmailIcon, title: 'Email: ', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
             { icon: githubIcon, title: 'Github: ', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
         ],
-        curriculumButton:'Curriculum',
-        curriculumText:"Do you want to see my curriculum?"
-    }
+        curriculumButton: 'Curriculum',
+        curriculumText: "Do you want to see my curriculum?"
+    },
+    projects: [
+        {
+            id: 1,
+            title: 'Humanizei',
+            image: humanizeiHome,
+            technologies: [TechnologyEnum.React, TechnologyEnum.NodeJS, TechnologyEnum.Bootstrap, TechnologyEnum.Prisma],
+            shortDescription: 'Humanized service system for E-commerce'
+        },
+    ],
+    detailedProject: [
+        {
+            id: 1,
+            title: 'Humanizei',
+            technologies: [TechnologyEnum.React, TechnologyEnum.NodeJS, TechnologyEnum.Bootstrap, TechnologyEnum.Prisma],
+            mainDescription: "Humanizei is a customer support startup for e-commerce and digital businesses that offers real-time support to clients. Combining advanced technology and artificial intelligence with the skills of human agents, Humanizei turns interactions into sales opportunities, aiming to increase the average ticket size and customer satisfaction. Its differentiator lies in the focus on transforming each interaction into a sale and in personalizing the customer experience, blending technology with a human touch to provide a more effective and complete service.",
+            description: [
+                { image: attendantPage, paragraph: "Humanized service system for E-commerce" },
+                { image: call, paragraph: "Humanized service system for E-commerce" },
+            ],
+            github: [
+                // { buttonName: "Github", isPrivate: true },
+                { buttonName: "Front", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" },
+                { buttonName: "Backend", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" },
+                { buttonName: "Mobile", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" }
+            ]
+        }
+    ]
 
 }
 
