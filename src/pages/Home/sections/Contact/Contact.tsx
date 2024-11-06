@@ -19,14 +19,14 @@ const Contact = () => {
     }
 
     return (
-        <section id="contato" className="mt-5 min-vh-100" style={{ overflowX: "hidden" }}>
+        <section id="contato" className="mb-5" style={{ overflowX: "hidden", minHeight: '80dvh' }}>
             <div className="d-flex align-items-end">
                 <AnimatedIcon
                     className="animatedIcon"
                     animatedIcon={contactMeAnimatedIcon}
                     loop
                 />
-                <h2 className="title">{translatedData.titles[2].title}</h2>
+                <h2 className="title">{translatedData.section[2].title}</h2>
             </div>
             <Row className="mt-5">
                 <Col lg={12}>
@@ -42,7 +42,7 @@ const Contact = () => {
                             <div key={link.title} className="d-flex justify-content-start align-items-center mt-3">
                                 <Icon icon={link.icon} size="3rem" className="me-3 iconBg p-1" />
                                 <a href={link.link} target="_blank" rel="noopener noreferrer" className="fst-italic">
-                                    <b>{link.title}</b>{link.text}
+                                    <b>{link.title}: </b>{link.text}
                                 </a>
                             </div>
                         ))}

@@ -12,7 +12,7 @@ const Icon = ({ icon, alt, size, className }: IconProps) => {
     }
     return (
         <div className="d-flex align-items-center">
-            <img src={icon} alt={alt} style={sizeStyle} className={className} />
+            <img src={icon} alt={alt} title={alt} style={sizeStyle} className={className} />
         </div >
     );
 }

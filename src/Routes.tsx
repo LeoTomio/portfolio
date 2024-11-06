@@ -6,7 +6,7 @@ import Skills from "./pages/Home/sections/Skills/Skills";
 import Footer from "./components/Footer";
 import Contact from "./pages/Home/sections/Contact/Contact";
 import Projects from "./pages/Home/sections/Projects/Projects";
-import Project from "./pages/Projects/index"
+import ProjectComponent from "./pages/Projects/index"
 import { DictionaryProvider } from "./utils/context/DictionaryContext";
 import Page404 from "./pages/NotFound";
 import Home from "./pages/Home";
@@ -18,7 +18,7 @@ const AppRoutes = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project/:id" element={<Project />} />
+          <Route path="/project/:id" element={<ProjectComponent />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />

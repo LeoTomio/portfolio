@@ -8,14 +8,14 @@ const Projects = () => {
     const { translatedData } = useDictionary()
 
     return (
-        <section id="projetos" className="min-vh-100 mb-5">
+        <section id="projetos" style={{ minHeight: '75dvh', marginTop: "8rem" }}>
             <div className="d-flex align-items-end">
                 <AnimatedIcon
                     className="animatedIcon"
                     animatedIcon={projectsAnimatedIcon}
                     loop
                 />
-                <h2 className="title">{translatedData.titles[3].title}</h2>
+                <h2 className="title">{translatedData.section[3].title}</h2>
             </div>
             <Container className="mt-5">
                 <Row className="d-flex justify-content-center">

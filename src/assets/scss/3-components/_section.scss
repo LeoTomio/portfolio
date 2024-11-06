@@ -8,21 +8,3 @@ section {
     margin-top: 3rem;
 }
 
-.title {
-    background-image: $gradient-title !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    color: transparent !important;
-    font-weight: bold;
-    font-size: 2.5rem;
-
-    &::after {
-        content: '';
-        height: 4px;
-        width: 100%;
-        display: block;
-        background-image: $gradient-title !important;
-        border-radius: 0 0 4rem 4rem;
-
-    }
-}

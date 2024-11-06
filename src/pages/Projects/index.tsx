@@ -1,25 +1,32 @@
-import { useParams } from 'react-router-dom';
-import useDictionary from '../../utils/hook/useDictionary';
 import { useEffect, useState } from 'react';
-import { DetailedProject } from '../../utils/dictionary/dictionary';
+import { Button, Col, Container, Image, Modal, Row } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
+import Icon from '../../components/Icon';
+import { Project } from '../../utils/dictionary/dictionary';
+import useDictionary from '../../utils/hook/useDictionary';
 import Page404 from '../NotFound';
-import { Col, Container, Image, Modal, Row } from 'react-bootstrap';
+import padlockIcon from '../../assets/icons/padlock.svg';
 
-const Project = () => {
+const ProjectComponent = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const { translatedData } = useDictionary();
-    const [projectData, setProjectData] = useState<DetailedProject>();
+    const [projectData, setProjectData] = useState<Project>();
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState("");
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setProjectData(translatedData.detailedProject.find((project) => project.id === Number(id)));
-    }, [id, translatedData.detailedProject]);
+        setProjectData(translatedData.projects.find((project) => project.id === Number(id)));
+    }, [id, translatedData.projects]);
 
     function handleImageClick(image: string) {
-        setSelectedImage(image);
-        setShowModal(true);
+        setTimeout(() => window.open(image, '_blank'), 500);
+
+    };
+
+    function handleNavigate(url: string) {
+        setTimeout(() => window.open(url), 500);
     };
 
     if (!projectData) {
@@ -28,27 +35,60 @@ const Project = () => {
 
     return (
         <Container fluid className="detailedProject">
-            <h1 className="text-center mb-4">{projectData.title}</h1>
-            <div className='mainDescription text-center'>
-                <p >{projectData.mainDescription}</p>
-            </div>
-            {projectData.description.map((project, key) => (
-                <Row key={key} className="align-items-center mb-4">
-                    <Col xs={12} md={6} className={`text-center p-5 ${key % 2 === 1 ? 'order-md-2 slide-in-right' : 'slide-in-left'}`}>
+            <Row className='mainDescription text-center'>
+                <Col lg={12}>
+                    <h1 className="text-center mb-4 title-no-row">{projectData.title}</h1>
+                </Col>
+                <Col lg={12}>
+                    <p>{projectData.detailed?.mainDescription}</p>
+                </Col>
+                <Col lg={12} className='mt-5'>
+                    <h2 className="title">{translatedData.sistemTexts[2]}</h2>
+                </Col>
+            </Row>
+            {projectData.detailed?.description.map((project, key) =>
+                <Row key={key} className="align-items-center mb-4 mt-5">
+                    <Col xs={12} md={6} className={`text-center px-3 px-lg-5 ${key % 2 === 1 ? 'order-md-2 slide-in-right' : 'slide-in-left'}`}>
                         <Image
                             className='scalable-img'
                             src={project.image}
                             alt={`Imagem ${key + 1}`}
                             fluid
-                            onClick={() => handleImageClick(project.image)} // Abre o modal ao clicar
+                            onClick={() => handleImageClick(project.image)} // Abre o modal e a nova guia
                             style={{ cursor: 'pointer' }}
                         />
                     </Col>
-                    <Col xs={12} md={6} className={`${key % 2 === 1 ? 'order-md-1 slide-in-left' : 'slide-in-right'}`}>
+                    <Col xs={12} md={6} className={`px-3 px-lg-5 ${key % 2 === 1 ? 'order-md-1 slide-in-left' : 'slide-in-right'}`}>
                         <p>{project.paragraph}</p>
                     </Col>
                 </Row>
-            ))}
+            )}
+            <Row className='mainDescription text-center mt-3'>
+                <Col lg={12} className='mt-3'>
+                    <h3 className="title-no-row">{translatedData.sistemTexts[0]}</h3>
+                </Col>
+                <Col lg={12} className='d-flex justify-content-center mt-2 gap-3 flex-wrap'>
+                    {projectData.technologies.map((tec) => {
+                        return (
+                            <Icon icon={tec.icon} alt={tec.name} size="3rem" className="p-1 iconBg info" />
+                        );
+                    })}
+                </Col>
+                <Col lg={12} className='mt-5'>
+                    <h3 className="title-no-row">{translatedData.sistemTexts[1]}</h3>
+                </Col>
+                <Col lg={12} className='d-flex justify-content-center position-relative gap-2 align-self-center mt-3 flex-wrap'>
+                    {!!projectData.detailed && projectData.detailed!.github.map((link) =>
+                        <Button variant={`${link.main ? 'secondary' : 'primary'}`} className='d-flex justify-content-center gap-2 fw-bold' onClick={() => { !link.isPrivate && handleNavigate(link.link) }}>
+                            <div className='d-flex align-items-center gap-2 '>
+                                {link.isPrivate && <Icon icon={padlockIcon} size="1rem" />}
+                                {link.buttonName}
+                            </div>
+                        </Button>
+                    )}
+                </Col>
+            </Row>
+
             <Modal dialogClassName="ts-modal ts-modal-xl" contentClassName="content-modal" show={showModal} onHide={() => setShowModal(false)} centered>
                 <Modal.Body className="d-flex justify-content-center p-0">
                     <Image
@@ -62,4 +102,4 @@ const Project = () => {
     );
 };
 
-export default Project;
+export default ProjectComponent;

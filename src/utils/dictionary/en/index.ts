@@ -1,18 +1,25 @@
+import githubIcon from "../../../assets/icons/devIcons/github.svg";
+import gmailIcon from "../../../assets/icons/gmail.png";
+import linkedinIcon from "../../../assets/icons/linkedin.svg";
 import { dataReturn, knowledgeEnum, LanguageEnum, TechnologyEnum } from "../../enum";
 import { DataCalculator } from "../../Functions";
 import getIconByTechnology from "../../IconExporter";
+import humanizeiAttendantPage from "../../images/projects/humanizei/atendantPage.png";
+import humanizeiCall from "../../images/projects/humanizei/call.png";
+import humanizeiFeedBack from "../../images/projects/humanizei/feedback.png";
+import humanizeiHome from "../../images/projects/humanizei/home.png";
+import humanizeiClientVision from "../../images/projects/humanizei/humanizeiClientVision.png";
+import humanizeiTickets from "../../images/projects/humanizei/tickets.png";
 import { DictionaryType } from "../dictionary";
-import gmailIcon from "../../../assets/icons/gmail.png"
-import linkedinIcon from "../../../assets/icons/linkedin.svg"
-import githubIcon from "../../../assets/icons/devIcons/github.svg"
-import humanizeiHome from "../../images/projects/humanizei/home.png"
-import attendantPage from "../../images/projects/humanizei/atendantPage.png"
-import call from "../../images/projects/humanizei/call.png"
 
 const en: DictionaryType = {
     workingPosition: "Full Stack Developer",
-    changeLanguage: "Change language to PT-br",
-    titles: [
+    sistemTexts:[
+        "Tecnologies", 
+        "Accesses",
+        "Explaining some features",
+    ],
+    section: [
         { href: "#sobre", title: 'About me' },
         { href: "#habilidades", title: 'Skills' },
         { href: "#contato", title: 'Contact' },
@@ -220,11 +227,11 @@ const en: DictionaryType = {
         }
     ],
     contact: {
-        description: "Feel free to contact me! My informations are below",
+        description: "Feel free to contact me!",
         links: [
-            { icon: linkedinIcon, title: 'Linkedin: ', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
-            { icon: gmailIcon, title: 'Email: ', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
-            { icon: githubIcon, title: 'Github: ', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
+            { icon: linkedinIcon, title: 'Linkedin', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
+            { icon: gmailIcon, title: 'Email', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
+            { icon: githubIcon, title: 'Github', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
         ],
         curriculumButton: 'Curriculum',
         curriculumText: "Do you want to see my curriculum?"
@@ -234,29 +241,42 @@ const en: DictionaryType = {
             id: 1,
             title: 'Humanizei',
             image: humanizeiHome,
-            technologies: [TechnologyEnum.React, TechnologyEnum.NodeJS, TechnologyEnum.Bootstrap, TechnologyEnum.Prisma],
-            shortDescription: 'Humanized service system for E-commerce'
-        },
-    ],
-    detailedProject: [
-        {
-            id: 1,
-            title: 'Humanizei',
-            technologies: [TechnologyEnum.React, TechnologyEnum.NodeJS, TechnologyEnum.Bootstrap, TechnologyEnum.Prisma],
-            mainDescription: "Humanizei is a customer support startup for e-commerce and digital businesses that offers real-time support to clients. Combining advanced technology and artificial intelligence with the skills of human agents, Humanizei turns interactions into sales opportunities, aiming to increase the average ticket size and customer satisfaction. Its differentiator lies in the focus on transforming each interaction into a sale and in personalizing the customer experience, blending technology with a human touch to provide a more effective and complete service.",
-            description: [
-                { image: attendantPage, paragraph: "Humanized service system for E-commerce" },
-                { image: call, paragraph: "Humanized service system for E-commerce" },
+            technologies: [
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Prisma", icon: getIconByTechnology(TechnologyEnum.Prisma) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) }
             ],
-            github: [
-                // { buttonName: "Github", isPrivate: true },
-                { buttonName: "Front", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" },
-                { buttonName: "Backend", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" },
-                { buttonName: "Mobile", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" }
-            ]
+            shortDescription: 'Humanized customer service system for E-commerce',
+            detailed: {
+                mainDescription: "Humanizei is a customer service startup for e-commerce and digital businesses that offers real-time support to customers. By combining advanced technology and artificial intelligence with the skills of service agents, Humanizei transforms interactions into sales opportunities, aiming to increase average order value and customer satisfaction. Its differentiator is its focus on turning every interaction into a sale and on personalizing service by combining technology with the human touch, providing a more efficient and complete experience.",
+                description: [
+                    { image: humanizeiAttendantPage, paragraph: "This is the attendant's view. On the STATUS screen, they can set their status as ONLINE or OFFLINE for each company that hired them. The same attendant can serve multiple companies simultaneously, enabling multi-tasking." },
+                    { image: humanizeiTickets, paragraph: "In the My Service menu, a list of completed services is shown. The attendant can view each service in detail, including the evaluation of both the customer and the attendant, the messages exchanged during the conversation, and an AI-generated transcript of the call." },
+                    { image: humanizeiHome, paragraph: "A Humanizei script is inserted into the client's website, and it is through this script that the customer can start a call with the attendant." },
+                    { image: humanizeiClientVision, paragraph: "This is the customer's view. They have the option to request assistance via messages or calls." },
+                    { image: humanizeiCall, paragraph: "After the request is accepted by the attendant, the customer is redirected to the call page, which is the heart of the system. In both message and video services, the user has access to all features, such as screen sharing, muting, hiding the chat, and activating the webcam." },
+                    { image: humanizeiFeedBack, paragraph: "After the call ends, both the user and the attendant can rate the quality of the service." }
+                ],
+                github: [
+                    { buttonName: "System", isPrivate: false, main: true, link: "https://humanizei.digital/" },
+                    { buttonName: "Front end", isPrivate: true, link: "" },
+                    { buttonName: "Back end", isPrivate: true, link: "" }
+                ]
+            }
         }
     ]
-
+    
 }
 
 

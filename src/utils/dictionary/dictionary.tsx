@@ -1,14 +1,13 @@
 export interface DictionaryType {
     workingPosition: string
-    changeLanguage: string
-    titles: Array<Titles>
+    sistemTexts: Array<string>
+    section: Array<Sections>
     about: About
     skills: Array<Skills>
     contact: Contact
     projects: Array<Project>
-    detailedProject: Array<DetailedProject>
 }
-interface Titles {
+interface Sections {
     title: string
     href: string
 }
@@ -41,12 +40,17 @@ export interface Project {
     id: number
     title: string;
     image: string;
-    technologies: Array<String>
+    technologies: Array<TechnologyInterface>
     shortDescription: string;
+    detailed?: DetailedProject
 
 }
+interface TechnologyInterface {
+    name: string
+    icon: string
+}
 
-export interface DetailedProject extends Pick<Project, 'id' | 'title' | 'technologies'> {    
+export interface DetailedProject {
     mainDescription: string
     description: Array<DetailedProjectDescription>
     github: Array<GithubProject>;
@@ -58,7 +62,8 @@ interface DetailedProjectDescription {
 }
 
 interface GithubProject {
-    link?: string;
+    link: string;
     isPrivate: boolean;
     buttonName: string;
+    main?: boolean
 }

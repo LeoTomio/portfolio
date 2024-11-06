@@ -29,7 +29,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>
-            {translatedData.titles.map((menu) => {
+            {translatedData.section.map((menu) => {
               return (
                 <Nav.Link href={`/${menu.href}`}>{menu.title}</Nav.Link>
               )

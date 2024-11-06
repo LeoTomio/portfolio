@@ -19,7 +19,7 @@ const About = () => {
             marginRight: '1rem'
           }}
         />
-        <h2 className="title">{translatedData.titles[0].title}</h2>
+        <h2 className="title">{translatedData.section[0].title}</h2>
       </div>
       <Row className="mt-5 justify-content-center">
         <Col lg={6} sm={11} className="about-text">

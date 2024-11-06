@@ -4,15 +4,23 @@ import linkedinIcon from "../../../assets/icons/linkedin.svg";
 import { dataReturn, knowledgeEnum, LanguageEnum, TechnologyEnum } from "../../enum";
 import { DataCalculator } from "../../Functions";
 import getIconByTechnology from "../../IconExporter";
-import attendantPage from "../../images/projects/humanizei/atendantPage.png";
-import call from "../../images/projects/humanizei/call.png";
+import humanizeiAttendantPage from "../../images/projects/humanizei/atendantPage.png";
+import humanizeiCall from "../../images/projects/humanizei/call.png";
+import humanizeiFeedBack from "../../images/projects/humanizei/feedback.png";
 import humanizeiHome from "../../images/projects/humanizei/home.png";
+import humanizeiClientVision from "../../images/projects/humanizei/humanizeiClientVision.png";
+import humanizeiTickets from "../../images/projects/humanizei/tickets.png";
 import { DictionaryType } from "../dictionary";
 
 const pt: DictionaryType = {
     workingPosition: "Desenvolvedor Full Stack",
-    changeLanguage: "alterar idioma para EN",
-    titles: [
+    sistemTexts: [
+        "Tecnologias",
+        "Acessos",
+        "Explicando algumas funcionalidade",
+
+    ],
+    section: [
         { href: "#sobre", title: 'Sobre mim' },
         { href: "#habilidades", title: 'Habilidades' },
         { href: "#contato", title: 'Contato' },
@@ -220,11 +228,11 @@ const pt: DictionaryType = {
         }
     ],
     contact: {
-        description: "Fique à vontade para entrar em contato comigo! abaixo segue meus contatos",
+        description: "Fique à vontade para entrar em contato!",
         links: [
-            { icon: linkedinIcon, title: 'Linkedin: ', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
-            { icon: gmailIcon, title: 'Email: ', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
-            { icon: githubIcon, title: 'Github: ', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
+            { icon: linkedinIcon, title: 'Linkedin', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
+            { icon: gmailIcon, title: 'Email', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
+            { icon: githubIcon, title: 'Github', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
         ],
 
         curriculumButton: 'Curriculo',
@@ -235,31 +243,42 @@ const pt: DictionaryType = {
             id: 1,
             title: 'Humanizei',
             image: humanizeiHome,
-            technologies: [TechnologyEnum.React, TechnologyEnum.NodeJS, TechnologyEnum.Bootstrap, TechnologyEnum.Prisma],
-            shortDescription: 'Sistema de atendimento humanizado para E-commerce'
-        },
-    ],
-    detailedProject: [
-        {
-            id: 1,
-            title: 'Humanizei',
-            technologies: [TechnologyEnum.React, TechnologyEnum.NodeJS, TechnologyEnum.Bootstrap, TechnologyEnum.Prisma],
-            mainDescription: "A Humanizei é uma startup de atendimento para e-commerces e negócios digitais que oferece suporte em tempo real aos clientes. Combinando tecnologia avançada e inteligência artificial com as habilidades de atendentes, a Humanizei transforma interações em oportunidades de venda, visando aumentar o ticket médio e a satisfação dos clientes. Seu diferencial está no foco em transformar cada interação em venda e na personalização do atendimento, que alia tecnologia e o toque humano, proporcionando uma experiência mais eficaz e completa.",
-            description: [
-                { image: attendantPage, paragraph: "Esta é a visão do atendente. Na tela de STATUS, ele pode definir seu estado como ONLINE ou OFFLINE para cada empresa que o contratou. O mesmo atendente pode atender várias empresas simultaneamente, facilitando o multiatendimento." },
-                { image: attendantPage, paragraph: "No menu Meus Atendimentos, é exibida uma lista dos atendimentos realizados. O atendente pode visualizar cada atendimento em detalhe, incluindo a avaliação do cliente e do atendente, as mensagens trocadas durante a conversa e uma transcrição do que foi falado durante a chamada." },
-                { image: call, paragraph: "Um script da Humanizei é inserido no site do contratante, e é através dele que o cliente poderá iniciar uma chamada com o atendimento." },
-                { image: call, paragraph: "Esta é a visão do cliente. Ele tem a opção de solicitar atendimento por mensagens ou por ligação." },
-                { image: call, paragraph: "Após a solicitação e a aceitação por parte do atendente, o cliente é redirecionado para a página de ligação, que é o coração do sistema. Em ambos os tipos de atendimento (mensagem e vídeo), o usuário tem acesso a todas as funcionalidades, como compartilhamento de tela, mutar, ocultar o chat, e ativar a webcam." },
-                { image: call, paragraph: "Ao encerrar a ligação, tanto o usuário quanto o atendente podem avaliar a qualidade do atendimento." }
-
-            ],
-            github: [
-                // { buttonName: "Github", isPrivate: true },
-                { buttonName: "Front", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" },
-                { buttonName: "Backend", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" },
-                { buttonName: "Mobile", isPrivate: false, link: "https://www.op.gg/summoners/br/THORt%C3%A3op%C3%A1direita" }
+            technologies: [
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Prisma", icon: getIconByTechnology(TechnologyEnum.Prisma) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) }
             ]
+            ,
+            shortDescription: 'Sistema de atendimento humanizado para E-commerce',
+            detailed: {
+                mainDescription: "A Humanizei é uma startup de atendimento para e-commerces e negócios digitais que oferece suporte em tempo real aos clientes. Combinando tecnologia avançada e inteligência artificial com as habilidades de atendentes, a Humanizei transforma interações em oportunidades de venda, visando aumentar o ticket médio e a satisfação dos clientes. Seu diferencial está no foco em transformar cada interação em venda e na personalização do atendimento, que alia tecnologia e o toque humano, proporcionando uma experiência mais eficaz e completa.",
+                description: [
+                    { image: humanizeiAttendantPage, paragraph: "Esta é a visão do atendente. Na tela de STATUS, pode definir o estado como ONLINE ou OFFLINE para cada empresa que o contratou. O mesmo atendente pode atender várias empresas simultaneamente, facilitando o multiatendimento." },
+                    { image: humanizeiTickets, paragraph: "No menu Meus Atendimentos, é exibido uma lista dos atendimentos realizados. O atendente pode visualizar cada atendimento em detalhe, incluindo a avaliação do cliente e do atendente, as mensagens trocadas durante a conversa e uma transcrição feita por IA do que foi falado durante a chamada." },
+                    { image: humanizeiHome, paragraph: "Um script da Humanizei é inserido no site do contratante, e é através dele que o cliente poderá iniciar uma chamada com o atendente." },
+                    { image: humanizeiClientVision, paragraph: "Esta é a visão do cliente. Ele tem a opção de solicitar atendimento por mensagens ou por ligação." },
+                    { image: humanizeiCall, paragraph: "Após a solicitação e a aceitação por parte do atendente, o cliente é redirecionado para a página de ligação, que é o coração do sistema. Em ambos os tipos de atendimento (mensagem e vídeo), o usuário tem acesso a todas as funcionalidades, como compartilhamento de tela, mutar, ocultar o chat, e ativar a webcam." },
+                    { image: humanizeiFeedBack, paragraph: "Ao encerrar a ligação, tanto o usuário quanto o atendente podem avaliar a qualidade do atendimento." }
+
+                ],
+                github: [
+                    { buttonName: "Sistema", isPrivate: false, main: true, link: "https://humanizei.digital/" },
+                    { buttonName: "Front end", isPrivate: true, link: "" },
+                    { buttonName: "Back end", isPrivate: true, link: "" }
+
+                ]
+            }
         }
     ]
 }

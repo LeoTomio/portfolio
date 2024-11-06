@@ -18,7 +18,7 @@ const Skills = () => {
                         marginRight: '1rem'
                     }}
                 />
-                <h2 className="title">{translatedData.titles[1].title}</h2>
+                <h2 className="title">{translatedData.section[1].title}</h2>
             </div>
             <Container className="mt-5">
                 <Row className="m-0 ">
