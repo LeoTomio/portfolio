@@ -46,15 +46,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
-
-
-
-
-
-
-
-
-
-// ajustar la no dictionary a parte dos projetos e os projetos detalhados
-// fazer a rota de projetos
-// montar a interface de detailedProject
