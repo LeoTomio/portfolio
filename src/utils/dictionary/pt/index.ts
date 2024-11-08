@@ -33,7 +33,7 @@ const pt: DictionaryType = {
             `Desenvolvedor web a ${DataCalculator({ year: 2021, month: 2, day: 15, fullReturn: dataReturn.full, language: LanguageEnum.pt })}`,
             "Cursando Análise e Desenvolvimento de Sistemas",
             "Interessado em Front-end e Back-end",
-            "Foco em Javascrip"
+            "Foco em Javascript"
         ]
     },
     skills: [

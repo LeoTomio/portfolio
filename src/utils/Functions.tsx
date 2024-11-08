@@ -27,12 +27,12 @@ export function DataCalculator({ year, month, day, fullReturn, language }: DataC
     }
 
     const yearText = language === 'pt'
-        ? `${yearsDifference} ano${yearsDifference !== 1 ? 's' : ''}`
-        : `${yearsDifference} year${yearsDifference !== 1 ? 's' : ''}`;
+        ? `${yearsDifference} ${yearsDifference !== 1 ? 'anos' : 'ano'}`
+        : `${yearsDifference} ${yearsDifference !== 1 ? 'years' : 'year'}`;
 
     const monthText = language === 'pt'
-        ? `${monthsDifference} mês${monthsDifference !== 1 ? 'es' : ''}`
-        : `${monthsDifference} month${monthsDifference !== 1 ? 's' : ''}`;
+        ? `${monthsDifference} ${monthsDifference !== 1 ? 'meses' : 'mês'}`
+        : `${monthsDifference} ${monthsDifference !== 1 ? 'months' : 'month'}`;
 
     if (fullReturn === dataReturn.full) {
         return `${yearText} e ${monthText}`;
