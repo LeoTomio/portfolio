@@ -30,24 +30,24 @@ const Skills = () => {
                     </Col> */}
                     {!!translatedData && translatedData.skills.map((skill, key) => {
                         console.log('key', key)
-                        if (key <= 5) {
-                            return (
-                                <Col lg={4} xs={12} sm={12} md={6} key={skill.title} className="d-flex justify-content-center">
-                                    <CardComponent
-                                        icon={skill.icon}
-                                        title={skill.title}
-                                        description={skill.description}
-                                        knowledgeLevel={skill.knowledgeLevel}
-                                        link={skill.link}
-                                    />
-                                </Col>
-                            )
-                        } else {
-                            return (
-                                <Button></Button>
+                        // if (key <= 5) {
+                        return (
+                            <Col lg={4} xs={12} sm={12} md={6} key={skill.title} className="d-flex justify-content-center">
+                                <CardComponent
+                                    icon={skill.icon}
+                                    title={skill.title}
+                                    description={skill.description}
+                                    knowledgeLevel={skill.knowledgeLevel}
+                                    link={skill.link}
+                                />
+                            </Col>
+                        )
+                        // } else {
+                        //     return (
+                        //         <Button></Button>
 
-                            )
-                        }
+                        //     )
+                        // }
                     })}
                 </Row>
             </Container>
