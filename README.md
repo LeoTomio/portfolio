@@ -45,4 +45,12 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+## A fazer
 
+- Fazer 1 função que exporte todos os icones do sistema, nao apenas os de tecnologias, derrepente fazer 2 funções no mesmo arquivo, uma para tecnologias e uma para os demais
+- Fazer exibir apenas 6 cards das habilidades e um botao "ver mais"
+- Fazer uma barra de pesquisa nas habilidades para pesquisar por nome 
+- Fazer filtragem nas habilidades, 4 botões (TUDO, INICIANTE, INTERMEDIARIO, AVANÇADO), conforme a pessoa clicar, ira filtrar os itens
+
+- Por um gif da automação em python preenchendo o formulario
+- Colocar os links do github no projeto de automação e no de formulario

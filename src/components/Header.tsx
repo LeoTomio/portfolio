@@ -31,7 +31,7 @@ const Header = () => {
           <Nav>
             {translatedData.section.map((menu) => {
               return (
-                <Nav.Link href={`/${menu.href}`}>{menu.title}</Nav.Link>
+                <Nav.Link key={menu.title} href={`/${menu.href}`}>{menu.title}</Nav.Link>
               )
             })}
 
@@ -40,7 +40,6 @@ const Header = () => {
               id="language-nav-dropdown">
               <NavDropdown.Item onClick={() => { setLanguage(LanguageEnum.pt) }} >
                 <div className='d-flex align-items-center gap-2 pe-3'>
-
                   Português
                   <AnimatedIcon style={{ height: 40 }} animatedIcon={ptFlagAnimatedIcon} loop />
                 </div>

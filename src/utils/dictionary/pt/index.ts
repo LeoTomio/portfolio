@@ -10,6 +10,18 @@ import humanizeiFeedBack from "../../images/projects/humanizei/feedback.png";
 import humanizeiHome from "../../images/projects/humanizei/home.png";
 import humanizeiClientVision from "../../images/projects/humanizei/humanizeiClientVision.png";
 import humanizeiTickets from "../../images/projects/humanizei/tickets.png";
+
+import formularioHome from "../../images/projects/formulario/home.png";
+import formularioAnswer from "../../images/projects/formulario/answer.png";
+
+import automacaoHome from "../../images/projects/automacao/home.png";
+import automacaoFormulario from "../../images/projects/automacao/formulario.png";
+
+import superFlixHome from "../../images/projects/superflix/home.png";
+import superFlixFavorites from "../../images/projects/superflix/favorites.png";
+import superFlixDescription from "../../images/projects/superflix/description.png";
+
+
 import { DictionaryType } from "../dictionary";
 
 const pt: DictionaryType = {
@@ -17,7 +29,7 @@ const pt: DictionaryType = {
     sistemTexts: [
         "Tecnologias",
         "Acessos",
-        "Explicando algumas funcionalidade",
+        "Explicando Algumas Funcionalidade",
 
     ],
     section: [
@@ -260,7 +272,7 @@ const pt: DictionaryType = {
                 { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) }
             ]
             ,
-            shortDescription: 'Sistema de atendimento humanizado para E-commerce',
+            shortDescription: 'Sistema de atendimento humanizado para E-commerce.',
             detailed: {
                 mainDescription: "A Humanizei é uma startup de atendimento para e-commerces e negócios digitais que oferece suporte em tempo real aos clientes. Combinando tecnologia avançada e inteligência artificial com as habilidades de atendentes, a Humanizei transforma interações em oportunidades de venda, visando aumentar o ticket médio e a satisfação dos clientes. Seu diferencial está no foco em transformar cada interação em venda e na personalização do atendimento, que alia tecnologia e o toque humano, proporcionando uma experiência mais eficaz e completa.",
                 description: [
@@ -273,13 +285,85 @@ const pt: DictionaryType = {
 
                 ],
                 github: [
-                    { buttonName: "Sistema", isPrivate: false, main: true, link: "https://humanizei.digital/" },
+                    { buttonName: "Site", isPrivate: false, main: true, link: "https://humanizei.digital/" },
                     { buttonName: "Front end", isPrivate: true, link: "" },
                     { buttonName: "Back end", isPrivate: true, link: "" }
 
+                ]
+            }
+        },
+        {
+            id: 2,
+            title: 'Formulário',
+            image: formularioHome,
+            technologies: [
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+            ],
+            shortDescription: 'Formulário de perguntas de multipla escolha.',
+            detailed: {
+                mainDescription: "Um formulário simples, de 10 perguntas de multípla escolha, onde apenas 1 resposta esta correta. Foi feito como aprendizado atráves da Next Level Week(NLW) da Rockseat",
+                description: [
+                    { image: formularioHome, paragraph: "Uma listagem com 10 perguntas sobre javascript, cada uma contém apenas 1 resposta correta." },
+                    { image: formularioAnswer, paragraph: "Conforme for respondendo, será exibido em vermelho caso esteja errado, e em verde caso acerte. No topo da tela é exibido o número de acerto " },
+
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, main: true, link: "https://leonardotomio-formulario.vercel.app/" },
+                    { buttonName: "Front end", isPrivate: false, link: "https://github.com/LeoTomio/NLW-Html-Css-Js" },
+                ]
+            }
+        },
+        {
+            id: 3,
+            title: 'Automação para Formulário',
+            image: automacaoHome,
+            technologies: [
+                { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+            ],
+            shortDescription: 'Automação para preencher formulários.',
+            detailed: {
+                mainDescription: "Automação para preencher formulários através de um arquivos csv, desenvolvido em python.",
+                description: [
+                    { image: automacaoHome, paragraph: "Ao executar, o navegador é aberto, entra no site especificado, executa o login, entra no sistema, e então começa a preencher o formulário." },
+                    { image: automacaoFormulario, paragraph: "Os dados que estão sendo inseridos estão dentro de um arquivo csv." },
+
+                ],
+                github: [
+                    { buttonName: "Github", isPrivate: false, link: "https://github.com/LeoTomio/automacaoFormularioPython" },
+                ]
+            }
+        },
+        {
+            id: 4,
+            title: 'SuperFlix',
+            image: superFlixHome,
+            technologies: [
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+            ],
+            shortDescription: 'Site com listagem de filmes.',
+            detailed: {
+                mainDescription: "Site com listagem de filmes, onde há a possibilidade de salvar o filme em uma listagem de favoritos",
+                description: [
+                    { image: superFlixHome, paragraph: "Tela inicial, possui a listagem de 20 filmes por pagina" },
+                    { image: superFlixDescription, paragraph: "Ao clicar em 'Acessar' você é redirecionado para a pagina de descrição do filme, onde possui informações dele, além do link do trailer, e a opção de salvar nos favoritos" },
+                    { image: superFlixFavorites, paragraph: "Ao favoritar, o filme fica salvo em uma listagem." }
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: true, link: "https://leonardotomio-superflix.vercel.app/" },
+                    { buttonName: "Front", isPrivate: false, link: "https://github.com/LeoTomio/SuperFlix" },
                 ]
             }
         }
     ]
 }
 export default pt
+
+

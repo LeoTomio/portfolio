@@ -27,7 +27,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ icon, title, description, knowl
                         
                     </Card.Body>
 
-                    <Card.Footer className="text-start  "> 
+                    <Card.Footer> 
                         <b>Nível: </b><span className={`${knowledgeLevel === knowledgeEnum.Iniciante ? 'text-success' : knowledgeLevel === knowledgeEnum.Intermediario ? 'text-warning' : 'text-danger'} `}>{knowledgeLevel}</span>
                     </Card.Footer>
                 </Col>

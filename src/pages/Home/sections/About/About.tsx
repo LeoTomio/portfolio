@@ -32,9 +32,9 @@ const About = () => {
         </Col>
         <Col lg={6} sm={11}>
           <ul className="topics-list">
-            {translatedData.about.itens.map((item) => {
+            {translatedData.about.itens.map((item,key) => {
               return (
-                <li>{item}</li>
+                <li key={key}>{item}</li>
               )
             })}
 

@@ -10,14 +10,21 @@ import humanizeiFeedBack from "../../images/projects/humanizei/feedback.png";
 import humanizeiHome from "../../images/projects/humanizei/home.png";
 import humanizeiClientVision from "../../images/projects/humanizei/humanizeiClientVision.png";
 import humanizeiTickets from "../../images/projects/humanizei/tickets.png";
+
+import formularioHome from "../../images/projects/formulario/home.png";
+import formularioAnswer from "../../images/projects/formulario/answer.png";
+
+import superFlixHome from "../../images/projects/superflix/home.png";
+import superFlixFavorites from "../../images/projects/superflix/favorites.png";
+import superFlixDescription from "../../images/projects/superflix/description.png";
 import { DictionaryType } from "../dictionary";
 
 const en: DictionaryType = {
     workingPosition: "Full Stack Developer",
-    sistemTexts:[
-        "Tecnologies", 
+    sistemTexts: [
+        "Tecnologies",
         "Accesses",
-        "Explaining some features",
+        "Explaining Some Features",
     ],
     section: [
         { href: "#sobre", title: 'About me' },
@@ -274,9 +281,76 @@ const en: DictionaryType = {
                     { buttonName: "Back end", isPrivate: true, link: "" }
                 ]
             }
+        },
+        {
+            id: 2,
+            title: 'Form',
+            image: formularioHome,
+            technologies: [
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+            ],
+            shortDescription: '10-question form',
+            detailed: {
+                mainDescription: "A simple 10-question multiple-choice form, where only one answer is correct. Created as a learning exercise through Rockseat's Next Level Week (NLW).",
+                description: [
+                    { image: formularioHome, paragraph: "A list of 10 questions about JavaScript, each with only one correct answer." },
+                    { image: formularioAnswer, paragraph: "As you answer, incorrect choices are marked in red, and correct ones in green. The number of correct answers is displayed at the top of the screen." },
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, main: true, link: "https://leonardotomio-formulario.vercel.app/" },
+                    { buttonName: "Front end", isPrivate: false, link: "" },
+                ]
+            }
+        },
+        {
+            id: 3,
+            title: 'Form Automation',
+            image: formularioHome,
+            technologies: [
+                { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+            ],
+            shortDescription: 'Form-filling automation',
+            detailed: {
+                mainDescription: "Automation to fill out forms using data from a CSV file, developed in Python.",
+                description: [
+                    { image: formularioHome, paragraph: "When run, a browser opens, navigates to the specified site, logs in, enters the system, and starts filling out the form." },
+                    { image: formularioAnswer, paragraph: "The data being entered is sourced from a CSV file." },
+                ],
+                github: [
+                    { buttonName: "Github", isPrivate: false, link: "" },
+                ]
+            }
+        },
+        {
+            id: 4,
+            title: 'SuperFlix',
+            image: superFlixHome,
+            technologies: [
+                { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+            ],
+            shortDescription: 'Movie listing website',
+            detailed: {
+                mainDescription: "A movie listing website where you can save movies to a favorites list.",
+                description: [
+                    { image: superFlixHome, paragraph: "Home page, featuring a list of 20 movies per page." },
+                    { image: superFlixDescription, paragraph: "By clicking 'Access', you are redirected to the movie description page, where you can find details about the movie, the trailer link, and the option to save it to favorites." },
+                    { image: superFlixFavorites, paragraph: "When favorited, the movie is saved to a list." }
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: true, link: "https://leonardotomio-superflix.vercel.app/" },
+                    { buttonName: "Front", isPrivate: false, link: "https://github.com/LeoTomio/SuperFlix" },
+                ]
+            }
         }
+        
+
     ]
-    
+
 }
 
 

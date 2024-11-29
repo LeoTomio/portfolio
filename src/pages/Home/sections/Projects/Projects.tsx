@@ -19,7 +19,7 @@ const Projects = () => {
             </div>
             <Container className="mt-5">
                 <Row className="d-flex justify-content-center">
-                    {translatedData.projects.map(project => (
+                    {translatedData.projects.map((project) => (
                         <Col key={project.id} xs={12} md={6} lg={4} className="mb-4 d-flex justify-content-center mx-0">
                             <ProjectCard
                                 id={project.id}

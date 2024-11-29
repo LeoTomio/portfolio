@@ -12,16 +12,16 @@ const ProjectCard = ({ id, shortDescription, image, technologies, title }: Proje
     };
 
     return (
-        <Card className='w-auto'>
+        <Card className='w-auto' >
             <Card.Img variant="top" src={image} />
-            <Card.Body>
-                <Card.Title>{title}</Card.Title>
+            <Card.Body className='d-grid'>
+                <Card.Title className='mt-3'>{title}</Card.Title>
                 <Card.Text className='d-flex justify-content-center flex-wrap gap-2 w-100'>
                     {technologies.map((tec) => (
-                        <Icon icon={tec.icon} alt={tec.name} size="2rem" className="p-1 iconBg info" />
+                        <Icon key={tec.name} icon={tec.icon} alt={tec.name} size="2rem" className="p-1 iconBg info" />
                     ))}
                 </Card.Text>
-                <Card.Text>{shortDescription}</Card.Text>
+                <Card.Text className='text-center'>{shortDescription}</Card.Text>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-between position-relative gap-3 align-self-center">
                 <Button variant="primary" className='d-flex justify-content-center gap-2 fw-bold' onClick={() => { handleNavigate() }}>
