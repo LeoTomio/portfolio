@@ -41,8 +41,8 @@ const Contact = () => {
                         {translatedData.contact.links.map((link) => (
                             <div key={link.title} className="d-flex justify-content-start align-items-center mt-3">
                                 <Icon icon={link.icon} size="3rem" className="me-3 iconBg p-1" />
-                                <a href={link.link} target="_blank" rel="noopener noreferrer" className="fst-italic">
-                                    <b>{link.title}: </b>{link.text}
+                                <a href={link.link} target="_blank" rel="noopener noreferrer" className="fst-italic text-decoration-none">
+                                    <b>{link.title}: </b> <span>{link.text}</span>
                                 </a>
                             </div>
                         ))}

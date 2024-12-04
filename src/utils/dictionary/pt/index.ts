@@ -243,7 +243,7 @@ const pt: DictionaryType = {
         description: "Fique à vontade para entrar em contato!",
         links: [
             { icon: linkedinIcon, title: 'Linkedin', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
-            { icon: gmailIcon, title: 'Email', text: "leo__tomio@hotmail.com", link: 'leo__tomio@hotmail.com' },
+            { icon: gmailIcon, title: 'Email', text: "leo__tomio@hotmail.com", link: 'mailto:leo__tomio@hotmail.com' },
             { icon: githubIcon, title: 'Github', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
         ],
 
