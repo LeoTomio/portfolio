@@ -301,7 +301,7 @@ const en: DictionaryType = {
                 ],
                 github: [
                     { buttonName: "Site", isPrivate: false, main: true, link: "https://leonardotomio-formulario.vercel.app/" },
-                    { buttonName: "Front end", isPrivate: false, link: "" },
+                    { buttonName: "Front end", isPrivate: false, link: "https://github.com/LeoTomio/NLW-Html-Css-Js" },
                 ]
             }
         },
@@ -342,7 +342,7 @@ const en: DictionaryType = {
                     { image: superFlixFavorites, paragraph: "When favorited, the movie is saved to a list." }
                 ],
                 github: [
-                    { buttonName: "Site", isPrivate: true, link: "https://leonardotomio-superflix.vercel.app/" },
+                    { buttonName: "Site", isPrivate: false, link: "https://leonardotomio-superflix.vercel.app/" },
                     { buttonName: "Front", isPrivate: false, link: "https://github.com/LeoTomio/SuperFlix" },
                 ]
             }
