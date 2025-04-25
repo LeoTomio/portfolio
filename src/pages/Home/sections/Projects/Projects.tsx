@@ -8,7 +8,7 @@ const Projects = () => {
     const { translatedData } = useDictionary()
 
     return (
-        <section id="projetos" style={{ minHeight: '75dvh', marginTop: "8rem" }}>
+        <section id="projetos" style={{ minHeight: '80dvh', paddingTop: "6rem" }}>
             <div className="d-flex align-items-end">
                 <AnimatedIcon
                     className="animatedIcon"

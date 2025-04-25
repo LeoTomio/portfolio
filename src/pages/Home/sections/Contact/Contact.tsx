@@ -11,9 +11,9 @@ const Contact = () => {
     function openResume() {
         let link
         if (language === LanguageEnum.pt) {
-            link = ('https://drive.google.com/file/d/15Sd92qu6IEryW4QYRXHXGtlGVocjalGp/view?usp=sharing');
+            link = ('https://drive.google.com/file/d/1d3QsYneWZFk4FXVx49vX9D0ixxlQkcpS/view?usp=sharing');
         } else if (language === LanguageEnum.en) {
-            link = ('https://drive.google.com/file/d/1nomcuy0xTU8u4b0SrtozxI3GOuR_6SNT/view?usp=sharing');
+            link = ('https://drive.google.com/file/d/1XDl_NqTitSEkLEB0TcGrV1ZdHyfKnhfP/view?usp=sharing');
         }
         window.open(link)
     }

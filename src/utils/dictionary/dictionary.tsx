@@ -47,7 +47,7 @@ export interface Project {
     title: string;
     image: string | null;
     technologies: Array<TechnologyInterface>
-    underDevelopment?: boolean;
+    underDevelopment?: string;
     shortDescription: string;
     detailed?: DetailedProject
 

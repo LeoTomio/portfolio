@@ -41,8 +41,9 @@ const ProjectComponent = () => {
                     <h1 className="text-center mb-4 title-no-row">{projectData.title}</h1>
                 </Col>
                 <Col lg={12}>
-                    <p>{projectData.detailed?.mainDescription}</p>
+                    <pre className="mainDescription text-center preserve-breaks">{projectData.detailed?.mainDescription}</pre>
                 </Col>
+
                 <Col lg={12} className='mt-5'>
                     <h2 className="title">{translatedData.sistemTexts[2]}</h2>
                 </Col>
@@ -75,19 +76,22 @@ const ProjectComponent = () => {
                         );
                     })}
                 </Col>
-                <Col lg={12} className='mt-5'>
-                    <h3 className="title-no-row">{translatedData.sistemTexts[1]}</h3>
-                </Col>
-                <Col lg={12} className='d-flex justify-content-center position-relative gap-2 align-self-center mt-3 flex-wrap'>
-                    {!!projectData.detailed && projectData.detailed!.github.map((link) =>
-                        <Button variant={`${link.main ? 'secondary' : 'primary'}`} className='d-flex justify-content-center gap-2 fw-bold' onClick={() => { !link.isPrivate && handleNavigate(link.link) }}>
-                            <div className='d-flex align-items-center gap-2 '>
-                                {link.isPrivate && <Icon icon={padlockIcon} size="1rem" />}
-                                {link.buttonName}
-                            </div>
-                        </Button>
-                    )}
-                </Col>
+                {!!projectData.detailed?.github.length &&
+                    <>
+                        <Col lg={12} className='mt-5'>
+                            <h3 className="title-no-row">{translatedData.sistemTexts[1]}</h3>
+                        </Col>
+                        <Col lg={12} className='d-flex justify-content-center position-relative gap-2 align-self-center mt-3 flex-wrap'>
+                            {!!projectData.detailed && projectData.detailed.github.map((link) =>
+                                <Button variant={`${link.main ? 'secondary' : 'primary'}`} className='d-flex justify-content-center gap-2 fw-bold' onClick={() => { !link.isPrivate && handleNavigate(link.link) }}>
+                                    <div className='d-flex align-items-center gap-2 '>
+                                        {link.isPrivate && <Icon icon={padlockIcon} size="1rem" />}
+                                        {link.buttonName}
+                                    </div>
+                                </Button>
+                            )}
+                        </Col>
+                    </>}
             </Row>
 
             <Modal dialogClassName="ts-modal ts-modal-xl" contentClassName="content-modal" show={showModal} onHide={() => setShowModal(false)} centered>

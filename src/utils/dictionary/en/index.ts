@@ -1,5 +1,6 @@
 import githubIcon from "../../../assets/icons/devIcons/github.svg";
 import gmailIcon from "../../../assets/icons/gmail.png";
+import whatsAppIcon from "../../../assets/icons/whatsapp.svg";
 import linkedinIcon from "../../../assets/icons/linkedin.svg";
 import { dataReturn, knowledgeEnum, LanguageEnum, TechnologyEnum } from "../../enum";
 import { DataCalculator } from "../../Functions";
@@ -14,9 +15,21 @@ import humanizeiTickets from "../../images/projects/humanizei/tickets.png";
 import formularioHome from "../../images/projects/formulario/home.png";
 import formularioAnswer from "../../images/projects/formulario/answer.png";
 
+
+import automacaoHome from "../../images/projects/automacao/home.png";
+import automacaoFormulario from "../../images/projects/automacao/formulario.png";
+
 import superFlixHome from "../../images/projects/superflix/home.png";
 import superFlixFavorites from "../../images/projects/superflix/favorites.png";
 import superFlixDescription from "../../images/projects/superflix/description.png";
+
+
+import portfolioHome from "../../images/projects/portfolio/home.png";
+import portfolioContactMe from "../../images/projects/portfolio/contactMe.png";
+import portfolioAboutMe from "../../images/projects/portfolio/aboutme.png";
+import portfolioSkills from "../../images/projects/portfolio/skills.png";
+import portfolioProjects from "../../images/projects/portfolio/projects.png";
+
 import { DictionaryType } from "../dictionary";
 
 const en: DictionaryType = {
@@ -242,6 +255,7 @@ const en: DictionaryType = {
         links: [
             { icon: linkedinIcon, title: 'Linkedin', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
             { icon: gmailIcon, title: 'Email', text: "leo__tomio@hotmail.com", link: 'mailto:leo__tomio@hotmail.com' },
+            { icon: whatsAppIcon, title: 'WhatsApp', text: "(47) 98449 3179", link: 'https://api.whatsapp.com/send?phone=5547984493179&text=Hello,%20I%20came%20through%20your%20portfolio' },
             { icon: githubIcon, title: 'Github', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
         ],
         curriculumButton: 'Curriculum',
@@ -249,43 +263,35 @@ const en: DictionaryType = {
     },
     projects: [
         {
-            id: 'projectDelivery',
-            title: 'Delivery Project',
-            image: null,
+            id: 'portfolio',
+            title: 'Portfolio',
+            image: portfolioHome,
             technologies: [
-                { name: "Next.js", icon: getIconByTechnology(TechnologyEnum.NextJS) },
-                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
                 { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
-                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
                 { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
                 { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
                 { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
                 { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
-                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
-                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
-                { name: "Prisma", icon: getIconByTechnology(TechnologyEnum.Prisma) },
                 { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
                 { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
-                { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
                 { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
-                { name: "Zod", icon: getIconByTechnology(TechnologyEnum.Zod) },
             ],
-            underDevelopment: true,
-            shortDescription: 'Delivery management system.',
+            shortDescription: 'Personal portfolio where I showcase my projects and skills.',
             detailed: {
-                mainDescription: `System focused on delivery management. Divided into two parts: the user part, where it's possible to choose products and their add-ons,
-                add to cart, apply coupons, fill in delivery and payment information, and submit the order, which will be sent through the system and via WhatsApp.
-                The admin part includes full system management, allowing you to add products and their add-ons, categories, coupons, edit account information, manage orders,
-                and view graphical statistics.`,
+                mainDescription: `Personal portfolio where I showcase my projects and skills. The portfolio is divided into 4 sections: About Me, Skills, Contact, and Projects.`,
                 description: [
-                    { image: null, paragraph: "More information about the project coming soon." },
+                    { image: portfolioAboutMe, paragraph: "In the About Me section, I briefly describe myself and highlight some relevant information." },
+                    { image: portfolioSkills, paragraph: "In the Skills section, you can see the level of knowledge I have in each technology." },
+                    { image: portfolioContactMe, paragraph: "In the Contact section, you'll find the ways to get in touch with me." },
+                    { image: portfolioProjects, paragraph: "In the Projects section, I present some of the projects I've developed. If you want to see more details, just click on the 'Details' button." },
                 ],
                 github: [
-                    { buttonName: "Website", isPrivate: false, link: "https://pizzaria-homolog.vercel.app/" },
-                    { buttonName: "Github", isPrivate: true, link: "" },
+                    { buttonName: "Website", isPrivate: false, link: "https://leonardotomio-portfolio.vercel.app/" },
+                    { buttonName: "Github", isPrivate: true, link: "https://github.com/LeoTomio/portfolio" },
                 ]
             }
         },
+
         {
             id: 'humanizei',
             title: 'Humanizei',
@@ -293,10 +299,10 @@ const en: DictionaryType = {
             technologies: [
                 { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
                 { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
-                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
                 { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
                 { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
                 { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
                 { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
                 { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
                 { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
@@ -306,19 +312,19 @@ const en: DictionaryType = {
                 { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
                 { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) }
             ],
-            shortDescription: 'Humanized customer service system for E-commerce',
+            shortDescription: 'Humanized support system for e-commerce.',
             detailed: {
-                mainDescription: "Humanizei is a customer service startup for e-commerce and digital businesses that offers real-time support to customers. By combining advanced technology and artificial intelligence with the skills of service agents, Humanizei transforms interactions into sales opportunities, aiming to increase average order value and customer satisfaction. Its differentiator is its focus on turning every interaction into a sale and on personalizing service by combining technology with the human touch, providing a more efficient and complete experience.",
+                mainDescription: "Humanizei is a customer service startup for e-commerce and digital businesses, offering real-time support. It combines advanced technology and AI with human skills to turn interactions into sales opportunities, aiming to increase average ticket and customer satisfaction. Its differential lies in the focus on transforming each interaction into a sale, combining technology and human touch for a more effective and complete experience.",
                 description: [
-                    { image: humanizeiAttendantPage, paragraph: "This is the attendant's view. On the STATUS screen, they can set their status as ONLINE or OFFLINE for each company that hired them. The same attendant can serve multiple companies simultaneously, enabling multi-tasking." },
-                    { image: humanizeiTickets, paragraph: "In the My Service menu, a list of completed services is shown. The attendant can view each service in detail, including the evaluation of both the customer and the attendant, the messages exchanged during the conversation, and an AI-generated transcript of the call." },
-                    { image: humanizeiHome, paragraph: "A Humanizei script is inserted into the client's website, and it is through this script that the customer can start a call with the attendant." },
-                    { image: humanizeiClientVision, paragraph: "This is the customer's view. They have the option to request assistance via messages or calls." },
-                    { image: humanizeiCall, paragraph: "After the request is accepted by the attendant, the customer is redirected to the call page, which is the heart of the system. In both message and video services, the user has access to all features, such as screen sharing, muting, hiding the chat, and activating the webcam." },
-                    { image: humanizeiFeedBack, paragraph: "After the call ends, both the user and the attendant can rate the quality of the service." }
+                    { image: humanizeiAttendantPage, paragraph: "This is the attendant's view. On the STATUS screen, they can set their status as ONLINE or OFFLINE for each company they work for. The same agent can serve multiple companies simultaneously, facilitating multi-service." },
+                    { image: humanizeiTickets, paragraph: "In the 'My Tickets' menu, all handled interactions are listed. The attendant can view details of each service, including customer and agent ratings, exchanged messages, and an AI-generated transcription of the call." },
+                    { image: humanizeiHome, paragraph: "A Humanizei script is embedded on the client's website, through which the customer can initiate a call with the agent." },
+                    { image: humanizeiClientVision, paragraph: "This is the customer view. They can choose to request support via messages or voice call." },
+                    { image: humanizeiCall, paragraph: "After the request is accepted, the customer is redirected to the call page — the core of the system. In both message and video modes, all features are available: screen sharing, mute, hide chat, and enable webcam." },
+                    { image: humanizeiFeedBack, paragraph: "At the end of the call, both customer and agent can rate the quality of the service." }
                 ],
                 github: [
-                    { buttonName: "System", isPrivate: false, main: true, link: "https://humanizei.digital/" },
+                    { buttonName: "Site", isPrivate: false, main: true, link: "https://humanizei.digital/" },
                     { buttonName: "Front end", isPrivate: true, link: "" },
                     { buttonName: "Back end", isPrivate: true, link: "" }
                 ]
@@ -329,16 +335,19 @@ const en: DictionaryType = {
             title: 'SuperFlix',
             image: superFlixHome,
             technologies: [
-                { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
                 { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
             ],
-            shortDescription: 'Movie listing website',
+            shortDescription: 'Movie listing website.',
             detailed: {
-                mainDescription: "A movie listing website where you can save movies to a favorites list.",
+                mainDescription: "Website for listing movies, with the option to save movies to a favorites list.",
                 description: [
-                    { image: superFlixHome, paragraph: "Home page, featuring a list of 20 movies per page." },
-                    { image: superFlixDescription, paragraph: "By clicking 'Access', you are redirected to the movie description page, where you can find details about the movie, the trailer link, and the option to save it to favorites." },
-                    { image: superFlixFavorites, paragraph: "When favorited, the movie is saved to a list." }
+                    { image: superFlixHome, paragraph: "Home screen displaying 20 movies per page." },
+                    { image: superFlixDescription, paragraph: "Clicking 'Access' redirects to the movie's details page with information, trailer link, and favorite option." },
+                    { image: superFlixFavorites, paragraph: "Favorited movies are saved in a list." }
                 ],
                 github: [
                     { buttonName: "Site", isPrivate: false, link: "https://leonardotomio-superflix.vercel.app/" },
@@ -356,12 +365,12 @@ const en: DictionaryType = {
                 { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
                 { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
             ],
-            shortDescription: '10 - question form',
+            shortDescription: 'Multiple choice questionnaire.',
             detailed: {
-                mainDescription: "A simple 10 question multiple-choice form, where only one answer is correct. Created as a learning exercise through Rockseat's Next Level Week (NLW).",
+                mainDescription: "A simple 10-question multiple choice quiz, with only one correct answer per question. Built as part of Rockseat’s Next Level Week (NLW).",
                 description: [
-                    { image: formularioHome, paragraph: "A list of 10 questions about JavaScript, each with only one correct answer." },
-                    { image: formularioAnswer, paragraph: "As you answer, incorrect choices are marked in red, and correct ones in green. The number of correct answers is displayed at the top of the screen." },
+                    { image: formularioHome, paragraph: "A list of 10 JavaScript questions, each with one correct answer." },
+                    { image: formularioAnswer, paragraph: "As questions are answered, incorrect choices are shown in red, correct ones in green. Score is shown at the top of the screen." },
                 ],
                 github: [
                     { buttonName: "Site", isPrivate: false, main: true, link: "https://leonardotomio-formulario.vercel.app/" },
@@ -372,29 +381,52 @@ const en: DictionaryType = {
         {
             id: 'formAutomation',
             title: 'Form Automation',
-            image: formularioHome,
+            image: automacaoHome,
             technologies: [
                 { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
                 { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
             ],
-            shortDescription: 'Form-filling automation',
+            shortDescription: 'Form auto-filling automation.',
             detailed: {
-                mainDescription: "Automation to fill out forms using data from a CSV file, developed in Python.",
+                mainDescription: "Automation for filling out forms using a CSV file, developed in Python.",
                 description: [
-                    { image: formularioHome, paragraph: "When run, a browser opens, navigates to the specified site, logs in, enters the system, and starts filling out the form." },
-                    { image: formularioAnswer, paragraph: "The data being entered is sourced from a CSV file." },
+                    { image: automacaoHome, paragraph: "When executed, the browser opens, logs into the site, navigates through the system, and begins filling out the form." },
+                    { image: automacaoFormulario, paragraph: "The inserted data comes from a CSV file." },
                 ],
                 github: [
-                    { buttonName: "Github", isPrivate: false, link: "" },
+                    { buttonName: "Github", isPrivate: false, link: "https://github.com/LeoTomio/automacaoFormularioPython" },
                 ]
             }
         },
-
-
+        {
+            id: 'sagep',
+            title: 'Prison Management Support System (SAGEP)',
+            image: null,
+            technologies: [
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Knex", icon: getIconByTechnology(TechnologyEnum.Knex) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
+            ],
+            shortDescription: 'Prison Management System.',
+            detailed: {
+                mainDescription: `SAGEP is an ERP system for prison management, offering control of inmate funds, labor activities, financial movements — both for inmates and prison units —, as well as visitor management, incidents, health, education, and other essential areas.
+    This is a private company system, developed over 2 years by me and two other developers during my first job.`,
+                description: [
+                    { image: null, paragraph: "As it's a private system, I cannot share further details or images." },
+                ],
+                github: []
+            }
+        }
     ]
-
 }
-
-
-
 export default en

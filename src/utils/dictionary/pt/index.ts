@@ -1,5 +1,6 @@
 import githubIcon from "../../../assets/icons/devIcons/github.svg";
 import gmailIcon from "../../../assets/icons/gmail.png";
+import whatsAppIcon from "../../../assets/icons/whatsapp.svg";
 import linkedinIcon from "../../../assets/icons/linkedin.svg";
 import { dataReturn, knowledgeEnum, LanguageEnum, TechnologyEnum } from "../../enum";
 import { DataCalculator } from "../../Functions";
@@ -21,6 +22,12 @@ import superFlixHome from "../../images/projects/superflix/home.png";
 import superFlixFavorites from "../../images/projects/superflix/favorites.png";
 import superFlixDescription from "../../images/projects/superflix/description.png";
 
+
+import portfolioHome from "../../images/projects/portfolio/home.png";
+import portfolioContactMe from "../../images/projects/portfolio/contactMe.png";
+import portfolioAboutMe from "../../images/projects/portfolio/aboutme.png";
+import portfolioSkills from "../../images/projects/portfolio/skills.png";
+import portfolioProjects from "../../images/projects/portfolio/projects.png";
 
 
 import { DictionaryType } from "../dictionary";
@@ -48,7 +55,7 @@ const pt: DictionaryType = {
         secondP: "Iniciei na carreira de desenvolvedor em março de 2021, desde então venho aprimorando minhas habilidades e conhecimentos. Estou sempre em busca de novos desafios e aprendizados no mundo da tecnologia",
         itens: [
             `Desenvolvedor web a ${DataCalculator({ year: 2021, month: 2, day: 15, fullReturn: dataReturn.full, language: LanguageEnum.pt })}`,
-            "Cursando Análise e Desenvolvimento de Sistemas",
+            "Formado em Análise e Desenvolvimento de Sistemas",
             "Interessado em Front-end e Back-end",
             "Foco em Javascript"
         ]
@@ -249,6 +256,7 @@ const pt: DictionaryType = {
         links: [
             { icon: linkedinIcon, title: 'Linkedin', text: "Leonardo Tomio", link: 'https://www.linkedin.com/in/leonardo-tomio-9342a91aa/' },
             { icon: gmailIcon, title: 'Email', text: "leo__tomio@hotmail.com", link: 'mailto:leo__tomio@hotmail.com' },
+            { icon: whatsAppIcon , title: 'WhatsApp', text: "(47) 98449 3179", link: 'https://api.whatsapp.com/send?phone=5547984493179&text=Olá,%20vim%20pelo%20seu%20portfólio' },
             { icon: githubIcon, title: 'Github', text: "LeoTomio", link: 'https://github.com/LeoTomio' }
         ],
 
@@ -256,6 +264,35 @@ const pt: DictionaryType = {
         curriculumText: "Deseja ver meu curriculo?"
     },
     projects: [
+        {
+            id: 'portfolio',
+            title: 'Portfólio',
+            image: portfolioHome,
+            technologies: [
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
+            ],
+            shortDescription: 'Portfólio pessoal, onde apresento meus projetos e habilidades.',
+            detailed: {
+                mainDescription: `Portfólio pessoal, onde apresento meus projetos e habilidades. O portfólio é dividido em 4 partes, sendo elas: Sobre mim, Habilidades, Contato e Projetos.`,
+                description: [
+                    { image: portfolioAboutMe, paragraph: "Na parte sobre mim, descrevo-me brevemente e pontuo algumas informações relevantes." },
+                    { image: portfolioSkills, paragraph: "Na parte de habilidades, é possível ver o nível de conhecimento em cada tecnologia." },
+                    { image: portfolioContactMe, paragraph: "Na parte de contato, são os meios de se comunicar comigo" },
+                    { image: portfolioProjects, paragraph: "Na parte de dos projetos, apresento alguns dos projetos que já desenvolvi. Caso queira ver com mais detalhes, basta clicar no botao de 'Detalhes'" },
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, link: "https://leonardotomio-portfolio.vercel.app/" },
+                    { buttonName: "Github", isPrivate: true, link: "https://github.com/LeoTomio/portfolio" },
+                ]
+            }
+        },
         {
             id: 'projectDelivery',
             title: 'Projeto de Delivery',
@@ -278,12 +315,11 @@ const pt: DictionaryType = {
                 { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
                 { name: "Zod", icon: getIconByTechnology(TechnologyEnum.Zod) },
             ],
-            underDevelopment: true,
+            underDevelopment: 'EM DESENVOLVIMENTO',
             shortDescription: 'Sistema de gerenciamento de Deliverys.',
             detailed: {
-                mainDescription: `Sistema focado no gerenciamento de delivery. Dividido em 2 partes, sendo elas a parte do usuário, onde é possível escolher os produtos e seus adicionais,
-                adicionair ao carrinho, aplicar cupom, preencher informações de entrega, pagamento, e enviar o pedido, que sera enviado via sistema e via WhatsApp. A parte do cliente possui toda
-                a parte de gerenciamento do sistema, onde é possível adicionar produtos e seus adicionais, categorias, cupons, editar informações da conta, gerenciar pedidos e visualizar estatísticas gráficas.
+                mainDescription: `Sistema focado no gerenciamento de delivery. Dividido em 2 partes, sendo elas a parte do usuário, onde é possível escolher os produtos e seus adicionais, adicionar ao carrinho, aplicar cupom, preencher informações de entrega, pagamento, e enviar o pedido, que sera enviado via sistema e via WhatsApp. 
+                A parte do restaurante possui toda a parte de gerenciamento do sistema, onde é possível adicionar produtos e seus adicionais, categorias, cupons, editar informações da conta, gerenciar pedidos e visualizar estatísticas gráficas.
                 `,
                 description: [
                     { image: null, paragraph: "Em breve mais informações sobre o projeto" },
@@ -402,6 +438,36 @@ const pt: DictionaryType = {
                 ],
                 github: [
                     { buttonName: "Github", isPrivate: false, link: "https://github.com/LeoTomio/automacaoFormularioPython" },
+                ]
+            }
+        },
+        {
+            id: 'sagep',
+            title: 'Sistema de Apoio a Gestão Prisional (SAGEP)',
+            image: null,
+            technologies: [
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Knex", icon: getIconByTechnology(TechnologyEnum.Knex) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
+            ],
+            shortDescription: 'Sistema de Gerenciamento de Presídio.',
+            detailed: {
+                mainDescription: `O SAGEP é um sistema ERP voltado à gestão prisional, oferecendo controle de pecúlio, atividades laborais, movimentações financeiras — tanto dos detentos quanto da unidade prisional —, além da gestão de visitantes, ocorrências, saúde, educação e outros setores essenciais.
+É um sistema de uma empresa privada, desenvolvido ao longo de 2 anos por mim e mais duas pessoas durante meu primeiro emprego.`,
+                description: [
+                    { image: null, paragraph: "Por se tratar de um sistema privado, não posso detalhar nem exibir imagens" },
+                ],
+                github: [
                 ]
             }
         },
