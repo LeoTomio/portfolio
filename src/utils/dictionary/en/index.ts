@@ -291,7 +291,43 @@ const en: DictionaryType = {
                 ]
             }
         },
-
+        {
+            id: 'projectDelivery',
+            title: 'Delivery Project',
+            image: null,
+            technologies: [
+                { name: "Next.js", icon: getIconByTechnology(TechnologyEnum.NextJS) },
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Prisma", icon: getIconByTechnology(TechnologyEnum.Prisma) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
+                { name: "Zod", icon: getIconByTechnology(TechnologyEnum.Zod) },
+            ],
+            underDevelopment: 'IN DEVELOPMENT',
+            shortDescription: 'Delivery management system.',
+            detailed: {
+                mainDescription: `System focused on delivery management. Divided into two parts: the user part, where it is possible to choose products and their extras, add to cart, apply a coupon, fill in delivery and payment information, and place the order, which is sent through the system and via WhatsApp. 
+                The restaurant part includes the entire management area, where it is possible to add products and extras, categories, coupons, edit account information, manage orders and view graphical statistics.
+                `,
+                description: [
+                    { image: null, paragraph: "More information about the project coming soon." },
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, link: "https://pizzaria-homolog.vercel.app/" },
+                    { buttonName: "Github", isPrivate: true, link: "" },
+                ]
+            }
+        },        
         {
             id: 'humanizei',
             title: 'Humanizei',
