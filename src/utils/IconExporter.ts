@@ -28,6 +28,7 @@ import tailwindIcon from '../assets/icons/devIcons/tailwind.svg';
 import typeORMIcon from '../assets/icons/devIcons/typeORM.svg';
 import typescriptIcon from '../assets/icons/devIcons/typescript.svg';
 import vscodeIcon from '../assets/icons/devIcons/vscode.svg';
+import zodIcon from '../assets/icons/devIcons/zod.svg';
 import { TechnologyEnum } from './enum';
 
 const getIconByTechnology = (technology: TechnologyEnum) => {
@@ -62,6 +63,7 @@ const getIconByTechnology = (technology: TechnologyEnum) => {
         [TechnologyEnum.TypeORM]: typeORMIcon,
         [TechnologyEnum.TypeScript]: typescriptIcon,
         [TechnologyEnum.VSCode]: vscodeIcon,
+        [TechnologyEnum.Zod]: zodIcon,
     };
 
     return icons[technology];

@@ -22,9 +22,14 @@ import superFlixFavorites from "../../images/projects/superflix/favorites.png";
 import superFlixDescription from "../../images/projects/superflix/description.png";
 
 
+
 import { DictionaryType } from "../dictionary";
 
 const pt: DictionaryType = {
+    language: {
+        pt: "Português",
+        en: "Inglês"
+    },
     workingPosition: "Desenvolvedor Full Stack",
     sistemTexts: [
         "Tecnologias",
@@ -252,16 +257,54 @@ const pt: DictionaryType = {
     },
     projects: [
         {
-            id: 1,
+            id: 'projectDelivery',
+            title: 'Projeto de Delivery',
+            image: null,
+            technologies: [
+                { name: "Next.js", icon: getIconByTechnology(TechnologyEnum.NextJS) },
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Prisma", icon: getIconByTechnology(TechnologyEnum.Prisma) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
+                { name: "Zod", icon: getIconByTechnology(TechnologyEnum.Zod) },
+            ],
+            underDevelopment: true,
+            shortDescription: 'Sistema de gerenciamento de Deliverys.',
+            detailed: {
+                mainDescription: `Sistema focado no gerenciamento de delivery. Dividido em 2 partes, sendo elas a parte do usuário, onde é possível escolher os produtos e seus adicionais,
+                adicionair ao carrinho, aplicar cupom, preencher informações de entrega, pagamento, e enviar o pedido, que sera enviado via sistema e via WhatsApp. A parte do cliente possui toda
+                a parte de gerenciamento do sistema, onde é possível adicionar produtos e seus adicionais, categorias, cupons, editar informações da conta, gerenciar pedidos e visualizar estatísticas gráficas.
+                `,
+                description: [
+                    { image: null, paragraph: "Em breve mais informações sobre o projeto" },
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, link: "https://pizzaria-homolog.vercel.app/" },
+                    { buttonName: "Github", isPrivate: true, link: "" },
+                ]
+            }
+        },
+        {
+            id: 'humanizei',
             title: 'Humanizei',
             image: humanizeiHome,
             technologies: [
                 { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
                 { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
-                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
                 { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
                 { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
                 { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
                 { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
                 { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
                 { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
@@ -293,7 +336,32 @@ const pt: DictionaryType = {
             }
         },
         {
-            id: 2,
+            id: 'superFlix',
+            title: 'SuperFlix',
+            image: superFlixHome,
+            technologies: [
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+            ],
+            shortDescription: 'Site com listagem de filmes.',
+            detailed: {
+                mainDescription: "Site com listagem de filmes, onde há a possibilidade de salvar o filme em uma listagem de favoritos",
+                description: [
+                    { image: superFlixHome, paragraph: "Tela inicial, possui a listagem de 20 filmes por pagina" },
+                    { image: superFlixDescription, paragraph: "Ao clicar em 'Acessar' você é redirecionado para a pagina de descrição do filme, onde possui informações dele, além do link do trailer, e a opção de salvar nos favoritos" },
+                    { image: superFlixFavorites, paragraph: "Ao favoritar, o filme fica salvo em uma listagem." }
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, link: "https://leonardotomio-superflix.vercel.app/" },
+                    { buttonName: "Front", isPrivate: false, link: "https://github.com/LeoTomio/SuperFlix" },
+                ]
+            }
+        },
+        {
+            id: 'form',
             title: 'Formulário',
             image: formularioHome,
             technologies: [
@@ -317,7 +385,7 @@ const pt: DictionaryType = {
             }
         },
         {
-            id: 3,
+            id: 'formAutomation',
             title: 'Automação para Formulário',
             image: automacaoHome,
             technologies: [
@@ -337,31 +405,6 @@ const pt: DictionaryType = {
                 ]
             }
         },
-        {
-            id: 4,
-            title: 'SuperFlix',
-            image: superFlixHome,
-            technologies: [
-                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
-                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
-                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
-                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
-                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
-            ],
-            shortDescription: 'Site com listagem de filmes.',
-            detailed: {
-                mainDescription: "Site com listagem de filmes, onde há a possibilidade de salvar o filme em uma listagem de favoritos",
-                description: [
-                    { image: superFlixHome, paragraph: "Tela inicial, possui a listagem de 20 filmes por pagina" },
-                    { image: superFlixDescription, paragraph: "Ao clicar em 'Acessar' você é redirecionado para a pagina de descrição do filme, onde possui informações dele, além do link do trailer, e a opção de salvar nos favoritos" },
-                    { image: superFlixFavorites, paragraph: "Ao favoritar, o filme fica salvo em uma listagem." }
-                ],
-                github: [
-                    { buttonName: "Site", isPrivate: true, link: "https://leonardotomio-superflix.vercel.app/" },
-                    { buttonName: "Front", isPrivate: false, link: "https://github.com/LeoTomio/SuperFlix" },
-                ]
-            }
-        }
     ]
 }
 export default pt

@@ -6,6 +6,7 @@ import { Project } from '../../utils/dictionary/dictionary';
 import useDictionary from '../../utils/hook/useDictionary';
 import Page404 from '../NotFound';
 import padlockIcon from '../../assets/icons/padlock.svg';
+import noPhoto from '../../assets/images/noPhoto.jpeg';
 
 const ProjectComponent = () => {
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ const ProjectComponent = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setProjectData(translatedData.projects.find((project) => project.id === Number(id)));
+        setProjectData(translatedData.projects.find((project) => project.id === id));
     }, [id, translatedData.projects]);
 
     function handleImageClick(image: string) {
@@ -51,10 +52,10 @@ const ProjectComponent = () => {
                     <Col xs={12} md={6} className={`text-center px-3 px-lg-5 ${key % 2 === 1 ? 'order-md-2 slide-in-right' : 'slide-in-left'}`}>
                         <Image
                             className='scalable-img'
-                            src={project.image}
+                            src={project.image ? project.image : noPhoto}
                             alt={`Imagem ${key + 1}`}
                             fluid
-                            onClick={() => handleImageClick(project.image)} // Abre o modal e a nova guia
+                            onClick={() => project.image && handleImageClick(project.image)}
                             style={{ cursor: 'pointer' }}
                         />
                     </Col>

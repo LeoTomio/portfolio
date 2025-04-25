@@ -1,4 +1,5 @@
 export interface DictionaryType {
+    language: Language
     workingPosition: string
     sistemTexts: Array<string>
     section: Array<Sections>
@@ -7,6 +8,11 @@ export interface DictionaryType {
     contact: Contact
     projects: Array<Project>
 }
+interface Language {
+    pt: string
+    en: string
+}
+
 interface Sections {
     title: string
     href: string
@@ -37,10 +43,11 @@ interface Links {
     link: string
 }
 export interface Project {
-    id: number
+    id: string | number;
     title: string;
-    image: string;
+    image: string | null;
     technologies: Array<TechnologyInterface>
+    underDevelopment?: boolean;
     shortDescription: string;
     detailed?: DetailedProject
 
@@ -58,7 +65,7 @@ export interface DetailedProject {
 
 interface DetailedProjectDescription {
     paragraph: string
-    image: string
+    image: string | null
 }
 
 interface GithubProject {

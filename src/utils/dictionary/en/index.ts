@@ -20,6 +20,10 @@ import superFlixDescription from "../../images/projects/superflix/description.pn
 import { DictionaryType } from "../dictionary";
 
 const en: DictionaryType = {
+    language: {
+        pt: "Portuguse",
+        en: "English",
+    },
     workingPosition: "Full Stack Developer",
     sistemTexts: [
         "Tecnologies",
@@ -245,7 +249,45 @@ const en: DictionaryType = {
     },
     projects: [
         {
-            id: 1,
+            id: 'projectDelivery',
+            title: 'Delivery Project',
+            image: null,
+            technologies: [
+                { name: "Next.js", icon: getIconByTechnology(TechnologyEnum.NextJS) },
+                { name: "Axios", icon: getIconByTechnology(TechnologyEnum.Axios) },
+                { name: "Bootstrap", icon: getIconByTechnology(TechnologyEnum.Bootstrap) },
+                { name: "Express", icon: getIconByTechnology(TechnologyEnum.Express) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+                { name: "Node.js", icon: getIconByTechnology(TechnologyEnum.NodeJS) },
+                { name: "PostgreSQL", icon: getIconByTechnology(TechnologyEnum.PostgreSQL) },
+                { name: "Prisma", icon: getIconByTechnology(TechnologyEnum.Prisma) },
+                { name: "React", icon: getIconByTechnology(TechnologyEnum.React) },
+                { name: "Sass", icon: getIconByTechnology(TechnologyEnum.Sass) },
+                { name: "Socket.IO", icon: getIconByTechnology(TechnologyEnum.SocketIO) },
+                { name: "Typescript", icon: getIconByTechnology(TechnologyEnum.TypeScript) },
+                { name: "Zod", icon: getIconByTechnology(TechnologyEnum.Zod) },
+            ],
+            underDevelopment: true,
+            shortDescription: 'Delivery management system.',
+            detailed: {
+                mainDescription: `System focused on delivery management. Divided into two parts: the user part, where it's possible to choose products and their add-ons,
+                add to cart, apply coupons, fill in delivery and payment information, and submit the order, which will be sent through the system and via WhatsApp.
+                The admin part includes full system management, allowing you to add products and their add-ons, categories, coupons, edit account information, manage orders,
+                and view graphical statistics.`,
+                description: [
+                    { image: null, paragraph: "More information about the project coming soon." },
+                ],
+                github: [
+                    { buttonName: "Website", isPrivate: false, link: "https://pizzaria-homolog.vercel.app/" },
+                    { buttonName: "Github", isPrivate: true, link: "" },
+                ]
+            }
+        },
+        {
+            id: 'humanizei',
             title: 'Humanizei',
             image: humanizeiHome,
             technologies: [
@@ -283,50 +325,7 @@ const en: DictionaryType = {
             }
         },
         {
-            id: 2,
-            title: 'Form',
-            image: formularioHome,
-            technologies: [
-                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
-                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
-                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
-                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
-            ],
-            shortDescription: '10-question form',
-            detailed: {
-                mainDescription: "A simple 10-question multiple-choice form, where only one answer is correct. Created as a learning exercise through Rockseat's Next Level Week (NLW).",
-                description: [
-                    { image: formularioHome, paragraph: "A list of 10 questions about JavaScript, each with only one correct answer." },
-                    { image: formularioAnswer, paragraph: "As you answer, incorrect choices are marked in red, and correct ones in green. The number of correct answers is displayed at the top of the screen." },
-                ],
-                github: [
-                    { buttonName: "Site", isPrivate: false, main: true, link: "https://leonardotomio-formulario.vercel.app/" },
-                    { buttonName: "Front end", isPrivate: false, link: "https://github.com/LeoTomio/NLW-Html-Css-Js" },
-                ]
-            }
-        },
-        {
-            id: 3,
-            title: 'Form Automation',
-            image: formularioHome,
-            technologies: [
-                { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
-                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
-            ],
-            shortDescription: 'Form-filling automation',
-            detailed: {
-                mainDescription: "Automation to fill out forms using data from a CSV file, developed in Python.",
-                description: [
-                    { image: formularioHome, paragraph: "When run, a browser opens, navigates to the specified site, logs in, enters the system, and starts filling out the form." },
-                    { image: formularioAnswer, paragraph: "The data being entered is sourced from a CSV file." },
-                ],
-                github: [
-                    { buttonName: "Github", isPrivate: false, link: "" },
-                ]
-            }
-        },
-        {
-            id: 4,
+            id: 'superFlix',
             title: 'SuperFlix',
             image: superFlixHome,
             technologies: [
@@ -346,8 +345,51 @@ const en: DictionaryType = {
                     { buttonName: "Front", isPrivate: false, link: "https://github.com/LeoTomio/SuperFlix" },
                 ]
             }
-        }
-        
+        },
+        {
+            id: 'form',
+            title: 'Form',
+            image: formularioHome,
+            technologies: [
+                { name: "CSS", icon: getIconByTechnology(TechnologyEnum.CSS) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+                { name: "HTML", icon: getIconByTechnology(TechnologyEnum.HTML5) },
+                { name: "Javascript", icon: getIconByTechnology(TechnologyEnum.JavaScript) },
+            ],
+            shortDescription: '10 - question form',
+            detailed: {
+                mainDescription: "A simple 10 question multiple-choice form, where only one answer is correct. Created as a learning exercise through Rockseat's Next Level Week (NLW).",
+                description: [
+                    { image: formularioHome, paragraph: "A list of 10 questions about JavaScript, each with only one correct answer." },
+                    { image: formularioAnswer, paragraph: "As you answer, incorrect choices are marked in red, and correct ones in green. The number of correct answers is displayed at the top of the screen." },
+                ],
+                github: [
+                    { buttonName: "Site", isPrivate: false, main: true, link: "https://leonardotomio-formulario.vercel.app/" },
+                    { buttonName: "Front end", isPrivate: false, link: "https://github.com/LeoTomio/NLW-Html-Css-Js" },
+                ]
+            }
+        },
+        {
+            id: 'formAutomation',
+            title: 'Form Automation',
+            image: formularioHome,
+            technologies: [
+                { name: "Python", icon: getIconByTechnology(TechnologyEnum.Python) },
+                { name: "Github", icon: getIconByTechnology(TechnologyEnum.GitHub) },
+            ],
+            shortDescription: 'Form-filling automation',
+            detailed: {
+                mainDescription: "Automation to fill out forms using data from a CSV file, developed in Python.",
+                description: [
+                    { image: formularioHome, paragraph: "When run, a browser opens, navigates to the specified site, logs in, enters the system, and starts filling out the form." },
+                    { image: formularioAnswer, paragraph: "The data being entered is sourced from a CSV file." },
+                ],
+                github: [
+                    { buttonName: "Github", isPrivate: false, link: "" },
+                ]
+            }
+        },
+
 
     ]
 

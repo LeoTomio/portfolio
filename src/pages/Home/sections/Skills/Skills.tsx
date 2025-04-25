@@ -29,7 +29,6 @@ const Skills = () => {
                         <Button>Avancado</Button>
                     </Col> */}
                     {!!translatedData && translatedData.skills.map((skill, key) => {
-                        console.log('key', key)
                         // if (key <= 5) {
                         return (
                             <Col lg={4} xs={12} sm={12} md={6} key={skill.title} className="d-flex justify-content-center">

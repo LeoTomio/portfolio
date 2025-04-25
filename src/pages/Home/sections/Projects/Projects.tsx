@@ -23,6 +23,7 @@ const Projects = () => {
                         <Col key={project.id} xs={12} md={6} lg={4} className="mb-4 d-flex justify-content-center mx-0">
                             <ProjectCard
                                 id={project.id}
+                                underDevelopment={project.underDevelopment}
                                 shortDescription={project.shortDescription}
                                 image={project.image}
                                 technologies={project.technologies}

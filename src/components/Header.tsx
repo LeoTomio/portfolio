@@ -40,13 +40,13 @@ const Header = () => {
               id="language-nav-dropdown">
               <NavDropdown.Item onClick={() => { setLanguage(LanguageEnum.pt) }} >
                 <div className='d-flex align-items-center gap-2 pe-3'>
-                  Português
+                  {translatedData.language.pt}
                   <AnimatedIcon style={{ height: 40 }} animatedIcon={ptFlagAnimatedIcon} loop />
                 </div>
               </NavDropdown.Item>
               <NavDropdown.Item onClick={() => { setLanguage(LanguageEnum.en) }}>
                 <div className='d-flex align-items-center gap-2 pe-3'>
-                  English
+                  {translatedData.language.en}
                   <AnimatedIcon style={{ height: 32 }} animatedIcon={enFlagAnimatedIcon} loop />
                 </div>
               </NavDropdown.Item>

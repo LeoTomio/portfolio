@@ -46,4 +46,5 @@ export enum TechnologyEnum {
     TypeORM = "typeORM",
     TypeScript = 'typescript',
     VSCode = 'vscode',
+    Zod = 'zod',
 }
