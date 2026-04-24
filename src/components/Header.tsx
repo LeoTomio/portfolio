@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Button, Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
-import AnimatedIcon from './AnimatedIcon';
-import homeAnimatedIcon from '../assets/icons/animatedIcons/home.json';
-import ptFlagAnimatedIcon from '../assets/icons/animatedIcons/ptFlag.json';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import enFlagAnimatedIcon from '../assets/icons/animatedIcons/enFlag.json';
+import homeAnimatedIcon from '../assets/icons/animatedIcons/home.json';
 import languageAnimatedIcon from '../assets/icons/animatedIcons/language.json';
-import useDictionary from '../utils/hook/useDictionary';
+import ptFlagAnimatedIcon from '../assets/icons/animatedIcons/ptFlag.json';
 import { LanguageEnum } from '../utils/enum';
+import useDictionary from '../utils/hook/useDictionary';
+import AnimatedIcon from './AnimatedIcon';
 
 
 const Header = () => {

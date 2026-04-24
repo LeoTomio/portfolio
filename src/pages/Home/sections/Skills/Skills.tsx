@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import skillsAnimatedIcon from '../../../../assets/icons/animatedIcons/skills.json'
 import AnimatedIcon from "../../../../components/AnimatedIcon"
 import CardComponent from "../../../../components/Card"

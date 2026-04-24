@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react';
-import { Button, Col, Container, Image, Modal, Row } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
+import padlockIcon from '../../assets/icons/padlock.svg';
+import noPhoto from '../../assets/images/noPhoto.jpeg';
 import Icon from '../../components/Icon';
 import { Project } from '../../utils/dictionary/dictionary';
 import useDictionary from '../../utils/hook/useDictionary';
 import Page404 from '../NotFound';
-import padlockIcon from '../../assets/icons/padlock.svg';
-import noPhoto from '../../assets/images/noPhoto.jpeg';
 
 const ProjectComponent = () => {
-    const navigate = useNavigate();
     const { id } = useParams();
     const { translatedData } = useDictionary();
     const [projectData, setProjectData] = useState<Project>();
-    const [showModal, setShowModal] = useState(false);
-    const [selectedImage, setSelectedImage] = useState("");
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -93,16 +90,6 @@ const ProjectComponent = () => {
                         </Col>
                     </>}
             </Row>
-
-            <Modal dialogClassName="ts-modal ts-modal-xl" contentClassName="content-modal" show={showModal} onHide={() => setShowModal(false)} centered>
-                <Modal.Body className="d-flex justify-content-center p-0">
-                    <Image
-                        src={selectedImage}
-                        alt="Imagem Ampliada"
-                        style={{ width: '100%', height: 'auto', maxHeight: '100vh', objectFit: 'contain' }}
-                    />
-                </Modal.Body>
-            </Modal>
         </Container>
     );
 };
