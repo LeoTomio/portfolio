@@ -8,15 +8,13 @@ import { LanguageEnum } from "../../../../utils/enum";
 const Contact = () => {
     const { translatedData, language } = useDictionary();
 
-    function openResume() {
-        let link
-        if (language === LanguageEnum.pt) {
-            link = ('https://drive.google.com/file/d/1rs3Xf-slGEhZbgQg2mNoFlJgePEt3j3R/view?usp=sharing');
-        } else if (language === LanguageEnum.en) {
-            link = ('https://drive.google.com/file/d/1yOSjpsMTUrZf1XogS_L9EWElH7BJhDX6/view?usp=sharing');
+    const getResumeLink = () => {
+        if (language === LanguageEnum.en) {
+            return 'https://drive.google.com/file/d/1yOSjpsMTUrZf1XogS_L9EWElH7BJhDX6/view?usp=sharing';
         }
-        window.open(link)
-    }
+
+        return 'https://drive.google.com/file/d/1rs3Xf-slGEhZbgQg2mNoFlJgePEt3j3R/view?usp=sharing';
+    };
 
     return (
         <section id="contato" className="mb-5" style={{ overflowX: "hidden", minHeight: '80dvh' }}>
@@ -50,7 +48,15 @@ const Contact = () => {
                 </Col>
                 <Col lg={6} sm={11} className="d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
                     <h5>{translatedData.contact.curriculumText}</h5>
-                    <Button className="mt-3 linear-btn" onClick={openResume}>{translatedData.contact.curriculumButton}</Button>
+                    <Button
+                        as="a"
+                        href={getResumeLink()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 linear-btn"
+                    >
+                        {translatedData.contact.curriculumButton}
+                    </Button>
                 </Col>
             </Row>
         </section>
