@@ -13,13 +13,13 @@ const Footer = () => {
           <Col md={12}>
             <h3>Leonardo Tomio</h3>
             <div className="d-flex justify-content-center gap-3">
-              <a href="https://github.com/LeoTomio" target='_blank'>
+              <a href="https://github.com/LeoTomio" target='_blank' rel="noreferrer">
                 <Icon icon={GithubIcon} size="2rem" className='cursor-pointer' />
               </a>
-              <a href="https://www.linkedin.com/in/leonardo-tomio-9342a91aa/" target='_blank'>
+              <a href="https://www.linkedin.com/in/leonardo-tomio-9342a91aa/" target='_blank' rel="noreferrer">
                 <Icon icon={LinkedinIcon} size="2rem" className='cursor-pointer' />
               </a>
-              <a href="mailto:leo__tomio@hotmail.com" target='_blank'>
+              <a href="mailto:leo__tomio@hotmail.com" target='_blank' rel="noreferrer">
                 <Icon icon={OutlookIcon} size="2rem" className='cursor-pointer' />
               </a>
             </div>
